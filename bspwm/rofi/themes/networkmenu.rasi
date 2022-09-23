@@ -14,9 +14,9 @@ window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		1px;
+    border:                  		0px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  5px;
     width:                          400px;
     height:                         420px;
     location:                       center;
@@ -31,15 +31,15 @@ prompt {
     padding:    					6px 0px 6px 0px;
 	background-color: 				@background;
 	text-color: 					@foreground;
-    border:                  		0px 0px 1px 0px;
+    border:                  		0px 0px 0px 0px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
 	str: 							"直";
-    border-radius:                  0px;
+    border-radius:                  5px;
     background-color:               @highlight;
     text-color:                     @background;
     padding:    					6px 10px 6px 10px;
@@ -49,8 +49,8 @@ textbox-prompt-colon {
 entry {
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		0px 0px 1px 0px;
-    border-radius:                  0px;
+    border:                  		0px 0px 0px 0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
     placeholder-color:              @foreground;
     placeholder:                    "";
@@ -99,7 +99,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border-radius:                  0px;
+    border-radius:                  5px;
     padding:                        5px;
 }
 
@@ -125,7 +125,7 @@ element normal.urgent,
 element alternate.urgent {
     background-color:               @urgent;
     text-color:                     @foreground;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 element normal.active,
@@ -138,7 +138,7 @@ element selected {
     background-color:               @selected;
     text-color:                     @background;
     border:                  		0px;
-    border-radius:                  0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
 }
 

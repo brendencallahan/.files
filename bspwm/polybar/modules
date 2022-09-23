@@ -23,11 +23,11 @@ format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 format-muted-prefix = 婢
 format-muted-prefix-font = 2
-format-muted-prefix-foreground = ${color.RED}
+format-muted-prefix-foreground = ${color.BLACK}
 
 label-volume = %percentage%%
 label-muted = " Mute"
-label-muted-foreground = #757575
+label-muted-foreground = ${color.WHITE}
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -40,7 +40,7 @@ ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
 ramp-volume-font = 2
-ramp-volume-foreground = ${color.BLUE}
+ramp-volume-foreground = ${color.WHITE}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -166,14 +166,14 @@ fuzzy-match = true
 
 ; ws-icon-[0-9]+ = label;icon
 ; Note that the label needs to correspond with the bspwm workspace name
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IV;
-ws-icon-4 = V;
-ws-icon-5 = VI;
-ws-icon-6 = VII;
-ws-icon-7 = VIII;
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
 ws-icon-default = 
 
 format = <label-state>
@@ -193,13 +193,13 @@ label-monitor = %name%
 ;label-dimmed-focused-background = ${color.BACKGROUND}
 
 label-focused = %name%
-label-focused-foreground = ${color.BLUE}
+label-focused-foreground = ${color.BLACK}
 label-focused-background = ${color.BACKGROUND}
-label-focused-underline = ${color.BLUE}
+label-focused-underline = ${color.BLACK}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${color.GREEN}
+label-occupied-foreground = ${color.ALTBLACK}
 label-occupied-background = ${color.BACKGROUND}
 ;label-occupied-underline = ${color.GREEN}
 label-occupied-padding = 1
@@ -216,7 +216,7 @@ label-empty-padding = 1
 
 ; Separator in between workspaces
 label-separator = "∙"
-label-separator-padding = 0
+label-separator-padding = 1
 label-separator-foreground = ${color.ALTBLACK}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -253,7 +253,7 @@ time-alt = %A, %d %B %Y
 format = <label>
 format-prefix = " "
 format-prefix-font = 3
-format-prefix-foreground = ${color.RED}
+format-prefix-foreground = ${color.BLACK}
 
 label = %time%
 label-font = 4
@@ -343,7 +343,7 @@ format-connected = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = " "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = ${color.RED}
+format-disconnected-prefix-foreground = ${color.BLACK}
 
 label-connected = "%{A1:nmd &:}%essid%%{A}"
 label-disconnected = "%{A1:nmd &:}Disconnected%{A}"
@@ -354,17 +354,18 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-font = 3
-ramp-signal-foreground = ${color.CYAN}
+ramp-signal-foreground = ${color.WHITE}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/sep]
 type = custom/text
-content = ◆
+content = ∙
 
 content-background = ${color.BACKGROUND}
-content-foreground = ${color.BLACK}
+content-foreground = ${color.ALTBLACK}
 content-padding = 2
+content-font = 2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______

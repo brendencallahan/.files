@@ -1,8 +1,8 @@
 [global]
 monitor = 0
 follow = mouse
-width = 280
-height = 80
+width = 260
+height = 70
 origin = top-right
 offset = 10x42
 scale = 0
@@ -11,9 +11,9 @@ shrink = no
 separator_color = auto
 separator_height = 4
 line_height = 4
-padding = 15
-horizontal_padding = 15
-frame_width = 1
+padding = 5
+horizontal_padding = 10
+frame_width = 0
 sort = no
 idle_threshold = 120
 font = Iosevka Custom 9
@@ -37,18 +37,18 @@ class = Dunst
 
 [urgency_low]
 timeout = 2
-background = "#333333"
+background = "#424B5D"
 foreground = "#f8f8f2"
-frame_color = "#92b6f4"
+frame_color = "#424B5D"
 
 [urgency_normal]
 timeout = 5
-background = "#333333"
+background = "#424B5D"
 foreground = "#f8f8f2"
-frame_color = "#92b6f4"
+frame_color = "#424B5D"
 
 [urgency_critical]
 timeout = 0
-background = "#333333"
+background = "#424B5D"
 foreground = "#f8f8f2"
-frame_color = "#f48fb1"
+frame_color = "#424B5D"

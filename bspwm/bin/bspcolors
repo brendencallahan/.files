@@ -13,9 +13,9 @@ source "$DIR"/themes/current.bash
 ## Get colors
 getcolors () {
 	FOREGROUND="$foreground"
-	BACKGROUND="#333333"
+	BACKGROUND="#424B5D"
 	CURSOR="$cursor"
-	BLACK="$color0"
+	BLACK="#404b73"
 	RED="$color1"
 	GREEN="$color2"
 	YELLOW="$color3"

@@ -58,7 +58,7 @@ workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
 		#bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
 		let name++
 	done
 }
@@ -172,6 +172,9 @@ feh --no-fehbg --bg-fill /usr/share/backgrounds/sungarden.png
 
 # Start mpd
 exec mpd &
+
+# Set refresh rate
+xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144.0
 
 # Start bspwm scripts
 bspcolors

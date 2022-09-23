@@ -16,9 +16,9 @@ window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		1px;
+    border:                  		0px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  5px;
     width:                          416px;
     location:                       center;
     anchor:                         center;
@@ -34,13 +34,13 @@ prompt {
 	text-color: 					@foreground;
     border:                  		0px 0px 0px 0px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
 	str: 							"";
-    border-radius:                  0px;
+    border-radius:                  5px;
     background-color:               @selected;
     text-color:                     @background;
     padding:    					6px 10px 6px 10px;
@@ -63,8 +63,8 @@ inputbar {
     spacing:                        0;
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		0px 0px 1px 0px;
-    border-radius:                  0px;
+    border:                  		0px 0px 0px 0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
     expand:                         false;
     margin:                         0px 0px 0px 0px;
@@ -100,8 +100,8 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border:                  		1px;
-    border-radius:                  0px;
+    border:                  		0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
     padding:                        23.5px 25px 23.5px 25px;
 }
@@ -129,7 +129,7 @@ element selected {
     background-color:               @selected;
     text-color:                     @background;
     border:                  		0px;
-    border-radius:                  0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
 }
 

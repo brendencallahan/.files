@@ -21,10 +21,10 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 100%
-height = 24
-offset-x = 0
-offset-y = 0
+width = 99.5%
+height = 20
+offset-x = 0.25%
+offset-y = 6.75
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
@@ -49,7 +49,7 @@ font-3 = "Iosevka:style=bold:"size=12;3"
 
 modules-left = bspwm
 modules-center = date 
-modules-right = volume sep battery sep brightness sep network 
+modules-right = volume sep network
 
 separator =
 spacing = 0

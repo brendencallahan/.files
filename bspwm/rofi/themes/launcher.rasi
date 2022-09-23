@@ -4,7 +4,7 @@
 configuration {
     location: 						0;
     fixed-num-lines: 				true;
-    show-icons: 					false;
+    show-icons: 					true;
     sidebar-mode: 					true;
     scroll-method: 					1;
     window-format: 					"[{w}] ··· {c} ···   {t}";
@@ -26,9 +26,9 @@ configuration {
 }
 
 window {
-    border: 						1px;
+    border: 						0px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					5px;
     width: 							500px;
     height: 						0px;
 }
@@ -56,9 +56,9 @@ entry {
     placeholder-color:              @foreground;
     placeholder:                    "Search...";
     padding:    					6px 2px 6px 2px;
-    border: 						0px 0px 1px 0px;
+    border: 						0px 0px 0px 0px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					5px;
 }
 
 case-indicator {
@@ -71,7 +71,7 @@ inputbar {
     text-color: 					@foreground;
     border: 						0px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					5px;
     children: 						[ prompt,textbox-prompt-colon,entry ];
 }
 
@@ -101,6 +101,7 @@ element-text, element-icon {
 element {
     border: 						0px;
     padding: 						7px;
+    border-radius: 					5px;
 }
 element normal.normal {
     background-color: 				@background;
@@ -144,7 +145,7 @@ element alternate.active {
 sidebar {
     border:       					0px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					5px;
 }
 
 button {
@@ -154,7 +155,7 @@ button {
     padding: 						7px;
     text-color: 					@foreground;
     border: 						0px;
-    border-radius: 					0px;
+    border-radius: 					5px;
     border-color: 					@selected;
 }
 
@@ -162,7 +163,7 @@ button selected {
     background-color:             	@selected;
     text-color: 					@background;
     border: 						0px;
-    border-radius: 					0px;
+    border-radius: 					5px;
     border-color: 					@selected;
 }
 
