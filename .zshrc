@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,8 +15,8 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# Default os theme is "archcraft"
-ZSH_THEME="robbyrussell"
+# Default archcraft theme is "archcraft"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="archcraft"
@@ -137,15 +144,19 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
 
-# nordvpn
-alias nordleague='nordvpn connect us6307'
+# nvidia GPU
+alias nvswitch='optimus-manager --no-confirm --switch nvidia'
 
-# Directory navigation
-alias home='cd'
-alias projects='/home/kent/Projects/'
-alias tests='/home/kent/Tests/'
+# terabyte HDD
+alias home='cd /home/kent/Data/'
+alias projects='cd /home/kent/Data/Projects/'
+alias tests='cd /home/kent/Data/Tests/'
+alias books='cd /home/kent/Data/documents/books/'
 
-# Distrobox
+# brightness control
+alias bl='light -S'
+
+# Distrobox commands
 alias dbox-create='distrobox-create --root'
 alias dbox-enter='distrobox-enter --root'
 alias dbox-ls='distrobox-list --root'
@@ -153,10 +164,16 @@ alias dbox-rm='distrobox-rm --root'
 alias dbox-upgrade='distrobox-upgrade --root'
 alias dbox-export='distrobox-export --root'
 alias dbox-host-exec='distrobox-host-exec --root'
+alias dbox-init='distrobox-init --root'
 
-# Mouse speed
-alias mouse_speed="xinput --set-prop 'pointer:Logitech G305' 'libinput Accel Speed'"
-alias mouse_default="xinput --set-prop 'pointer:Logitech G305' 'libinput Accel Speed' -0.35"
+# Neofetch
+alias nf='neofetch'
 
-# League of Legends
-alias luggy="nordvpn connect us6307 && xinput --set-prop 'pointer:Logitech G305' 'libinput Accel Speed' -0.35"
+# Neovim
+alias nv='nvim'
+
+# Vim
+alias v='vim'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
