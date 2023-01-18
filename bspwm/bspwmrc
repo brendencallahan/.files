@@ -173,9 +173,6 @@ feh --no-fehbg --bg-fill /usr/share/backgrounds/sungarden.png
 # Start mpd
 exec mpd &
 
-# Set refresh rate
-xrandr --output HDMI-A-0 --mode 1920x1080 --rate 144.0
-
 # Start bspwm scripts
 bspcolors
 bspbar

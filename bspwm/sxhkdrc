@@ -60,7 +60,7 @@ ctrl + alt + l
 ##---------- System Keys ----------##
 
 # Take a screenshot
-Print
+super + Print
 	takeshot --now
 	
 # Take screenshot in 5 second
@@ -76,12 +76,12 @@ ctrl + Print
 	takeshot --win
 
 # Take screenshot of area
-ctrl + alt + Print
+Print
 	takeshot --area
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	brightness{ --inc, --dec}
+	light{ -A 5, -U 5}
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}

@@ -5,30 +5,30 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: "Lilex Nerd Font Mono"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "Lilex Nerd Font Mono"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "Lilex Nerd Font Mono"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "Lilex Nerd Font Mono"
     #style: Bold Italic
 
   # Point size
-  size: 10
+  size: 11
 
   # Offset
   #offset:
-  #  x: 0
+  #  x: 0 
   #  y: 0
 
   # Glyph offset

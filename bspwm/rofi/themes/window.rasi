@@ -51,7 +51,7 @@ entry {
     background-color:               @background;
     text-color:                     @foreground;
     border:                  		0px 0px 0px 0px;
-    border-radius:                  5px;
+    border-radius:                  0px;
     border-color:                  	@selected;
     placeholder-color:              @foreground;
     placeholder:                    "Find...";
@@ -100,7 +100,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border-radius:                  5px;
+    border-radius:                  0px;
     padding:                        5px;
 }
 

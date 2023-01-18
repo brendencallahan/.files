@@ -49,7 +49,7 @@ font-3 = "Iosevka:style=bold:"size=12;3"
 
 modules-left = bspwm
 modules-center = date 
-modules-right = volume sep network
+modules-right = volume sep battery sep brightness sep network 
 
 separator =
 spacing = 0

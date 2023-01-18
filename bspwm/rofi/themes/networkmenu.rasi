@@ -99,7 +99,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border-radius:                  5px;
+    border-radius:                  0px;
     padding:                        5px;
 }
 

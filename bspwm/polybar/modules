@@ -78,7 +78,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.WHITE}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -104,7 +104,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.WHITE}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -127,7 +127,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 format-full-prefix = " "
 format-full-prefix-font = 2
-format-full-prefix-foreground = ${color.RED}
+format-full-prefix-foreground = ${color.WHITE}
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
@@ -139,7 +139,7 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-font = 2
-ramp-capacity-foreground = ${color.YELLOW}
+ramp-capacity-foreground = ${color.BLACK}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -147,7 +147,7 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-font = 2
-animation-charging-foreground = ${color.GREEN}
+animation-charging-foreground = ${color.WHITE}
 animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -195,7 +195,7 @@ label-monitor = %name%
 label-focused = %name%
 label-focused-foreground = ${color.BLACK}
 label-focused-background = ${color.BACKGROUND}
-label-focused-underline = ${color.BLACK}
+label-focused-underline = ${color.BLACK} 
 label-focused-padding = 1
 
 label-occupied = %name%
@@ -363,7 +363,7 @@ type = custom/text
 content = ∙
 
 content-background = ${color.BACKGROUND}
-content-foreground = ${color.ALTBLACK}
+content-foreground = ${color.BLACK}
 content-padding = 2
 content-font = 2
 
