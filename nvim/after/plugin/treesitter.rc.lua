@@ -15,10 +15,10 @@ ts.setup {
     "tsx",
     "toml",
     "fish",
-    "php",
+    "javascript",
+    "typescript",
     "json",
     "yaml",
-    "swift",
     "css",
     "html",
     "lua"
