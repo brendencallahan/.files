@@ -9,6 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'navarasu/onedark.nvim'
+  use 'mg979/vim-visual-multi'
   use 'lukas-reineke/indent-blankline.nvim'
   --use {
   --  'svrana/neosolarized.nvim',

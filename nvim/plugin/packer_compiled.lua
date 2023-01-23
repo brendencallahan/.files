@@ -214,6 +214,11 @@ _G.packer_plugins = {
     path = "/home/kent/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/kent/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/kent/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
