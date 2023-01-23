@@ -8,19 +8,43 @@ saga.setup({
     colors = {
       normal_bg = '#2d2c35'
     }
+  },
+  finder_action_keys = {
+    open = "o",
+    vsplit = "v",
+    split = "h",
+    quit = "q",
+    scroll_down = "<C-f>",
+    scroll_up = "<C-b>",
+  },
+  definition_action_keys = {
+    edit = '<C-c>o',
+    vsplit = '<C-c>v',
+    split = '<C-c>i',
+    tabe = '<C-c>t',
+    quit = 'q',
+    close = '<Esc>',
+  },
+  rename_action_keys = {
+    quit = '<C-c>',
+    exec = '<CR>'
   }
 })
 
-local diagnostic = require("lspsaga.diagnostic")
 local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<C-j>', diagnostic.goto_next, opts)
-vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
-vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
--- vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
-vim.keymap.set('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
-vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+
+vim.keymap.set('n', '<C-k>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
+vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+vim.keymap.set('n', '<leader>l', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
+vim.keymap.set('n', '<leader>h', '<Cmd>Lspsaga hover_doc<CR>', opts)
+vim.keymap.set('n', '<leader>d', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+-- vim.keymap.set('i', '<leader>k', '<Cmd>Lspsaga signature_help<CR>', opts)
+-- vim.keymap.set('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+vim.keymap.set('n', '<leader>pd', '<Cmd>Lspsaga peek_definition<CR>', opts)
+vim.keymap.set('n', '<leader>pD', '<Cmd>Lspsaga goto_definition<CR>', opts)
+vim.keymap.set('n', '<leader>rnl', '<Cmd>Lspsaga rename<CR>', opts)
+vim.keymap.set('n', '<leader>rng', '<Cmd>Lspsaga rename ++project<CR>', opts)
+vim.keymap.set({ 'n', 't' }, '<leader>tt', '<Cmd>Lspsaga term_toggle<CR>', opts)
 
 -- code action
 local codeaction = require("lspsaga.codeaction")

@@ -13,27 +13,29 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ["q"] = actions.close
+        ["q"] = actions.close,
+        ["t"] = actions.select_tab,
+        ["sh"] = actions.select_horizontal,
+        ["sv"] = actions.select_vertical
       },
     },
   },
   extensions = {
     file_browser = {
+      initial_mode = "normal",
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
       mappings = {
         -- your custom insert mode mappings
-        ["i"] = {
-          ["<C-w>"] = function() vim.cmd('normal vbd') end,
-        },
         ["n"] = {
           -- your custom normal mode mappings
-          ["N"] = fb_actions.create,
-          ["h"] = fb_actions.goto_parent_dir,
-          ["/"] = function()
-            vim.cmd('startinsert')
-          end
+          ["a"] = fb_actions.create,
+          ["r"] = fb_actions.rename,
+          ["d"] = fb_actions.remove,
+          ["c"] = fb_actions.copy,
+          ["m"] = fb_actions.move,
+          ["u"] = fb_actions.goto_parent_dir,
         },
       },
     },
@@ -42,37 +44,37 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
+vim.keymap.set('n', '<leader>gf',
   function()
     builtin.find_files({
       no_ignore = false,
       hidden = true
     })
   end)
-vim.keymap.set('n', ';r', function()
+vim.keymap.set('n', '<leader>gl', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '\\\\', function()
+vim.keymap.set('n', '<leader>gb', function()
   builtin.buffers()
 end)
-vim.keymap.set('n', ';t', function()
+vim.keymap.set('n', '<leader>gh', function()
   builtin.help_tags()
 end)
-vim.keymap.set('n', ';;', function()
+vim.keymap.set('n', '<leader>gr', function()
   builtin.resume()
 end)
-vim.keymap.set('n', ';e', function()
+vim.keymap.set('n', '<leader>gd', function()
   builtin.diagnostics()
 end)
-vim.keymap.set("n", "sf", function()
+vim.keymap.set("n", "<leader>f", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
     respect_gitignore = false,
     hidden = true,
     grouped = true,
-    previewer = false,
+    -- previewer = false,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_config = { height = 20 }
   })
 end)

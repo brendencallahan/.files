@@ -1,0 +1,2 @@
+close with <leader>q or <leader>wq
+integrated terminal?
