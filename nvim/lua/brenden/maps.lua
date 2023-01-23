@@ -12,19 +12,22 @@ keymap.set('n', 'x', '"_x')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Save all
-keymap.set('n', '<leader>w', ':w<cr>')
+keymap.set('n', '<leader>w', ':w<CR>')
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+-- keymap.set('n', '<leader>f', ':NvimTreeToggle<CR>')
+
+
 -- Close buffer
-keymap.set('n', '<leader>q', ':q<cr>')
-keymap.set('n', '<leader>!', ':q!<cr>')
-keymap.set('n', '<leader>wq', ':wq<cr>')
+keymap.set('n', '<leader>q', ':q<CR>')
+keymap.set('n', '<leader>!', ':q!<CR>')
+keymap.set('n', '<leader>wq', ':wq<CR>')
 
 -- Tab creation/navigation
-keymap.set('n', '<leader>te', ':tabedit')
-keymap.set('n', '<leader>tc', ':tabclose<cr>')
+keymap.set('n', '<leader>tn', ':tabedit')
+keymap.set('n', '<leader>tq', ':tabclose<CR>')
 keymap.set('n', '<leader>th', 'gT')
 keymap.set('n', '<leader>tl', 'gt')
 

@@ -35,8 +35,8 @@ local opts = { noremap = true, silent = true }
 
 vim.keymap.set('n', '<C-k>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-vim.keymap.set('n', '<leader>l', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
-vim.keymap.set('n', '<leader>h', '<Cmd>Lspsaga hover_doc<CR>', opts)
+vim.keymap.set('n', '<leader>pl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
+vim.keymap.set('n', '<leader>ph', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', '<leader>d', '<Cmd>Lspsaga lsp_finder<CR>', opts)
 -- vim.keymap.set('i', '<leader>k', '<Cmd>Lspsaga signature_help<CR>', opts)
 -- vim.keymap.set('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
