@@ -10,12 +10,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'mg979/vim-visual-multi'
   use 'lukas-reineke/indent-blankline.nvim'
-  -- use 'catppuccin/nvim'
   use 'navarasu/onedark.nvim'
-  --use {
-  --  'svrana/neosolarized.nvim',
-  --  requires = { 'tjdevries/colorbuddy.nvim' }
-  -- }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -55,7 +50,7 @@ packer.startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use "akinsho/bufferline.nvim"
+  use 'akinsho/bufferline.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 end)
