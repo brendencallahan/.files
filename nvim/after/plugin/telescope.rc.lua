@@ -15,8 +15,8 @@ telescope.setup {
       n = {
         ["q"] = actions.close,
         ["t"] = actions.select_tab,
-        ["sh"] = actions.select_horizontal,
-        ["sv"] = actions.select_vertical
+        ["h"] = actions.select_horizontal,
+        ["v"] = actions.select_vertical
       },
     },
   },

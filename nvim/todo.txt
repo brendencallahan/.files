@@ -1,2 +1,4 @@
-close with <leader>q or <leader>wq
-integrated terminal?
+install packer
+:PackerSync
+sudo npm install -g @fsouza/prettierd
+sudo pacman -S eslint eslint_d
