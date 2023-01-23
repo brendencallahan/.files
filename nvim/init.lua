@@ -1,4 +1,4 @@
-require('craftzdog.base')
-require('craftzdog.highlights')
-require('craftzdog.maps')
-require('craftzdog.plugins')
+require('brenden.base')
+require('brenden.highlights')
+require('brenden.maps')
+require('brenden.plugins')
