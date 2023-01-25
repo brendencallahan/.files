@@ -8,6 +8,13 @@ keymap.set('n', 'x', '"_x')
 -- keymap.set('n', '+', '<C-a>')
 -- keymap.set('n', '-', '<C-x>')
 
+-- Registers
+keymap.set('n', '<leader>yc', '"+y') --yank line to clipboard
+keymap.set('v', '<leader>yc', '"+y') --yank selection to clipboard
+-- paste most recent yank, 'd', 'x', etc. doesn't overwrite
+keymap.set('n', '<leader>py', '"0p')
+keymap.set('n', '<leader>pc', '"+p')
+
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
