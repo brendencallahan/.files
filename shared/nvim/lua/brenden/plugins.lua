@@ -45,10 +45,6 @@ packer.startup(function(use)
     }
   }
   use 'norcalli/nvim-colorizer.lua'
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
   use 'akinsho/bufferline.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
