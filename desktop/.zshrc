@@ -167,7 +167,7 @@ alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
 
 # dir navigation
-
+alias projects='cd /home/kent/Projects'
 
 # ls
 alias l='ls -lh'
