@@ -7,8 +7,9 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  -- use 'folke/zen-mode.nvim'
+  -- use 'mg979/vim-visual-multi' --multicursor/find+replace *just use vim built-in features
   use 'wbthomason/packer.nvim'
-  use 'mg979/vim-visual-multi'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'navarasu/onedark.nvim'
   use 'nvim-lualine/lualine.nvim' -- Statusline
@@ -36,7 +37,6 @@ packer.startup(function(use)
       'kyazdani42/nvim-web-devicons'
     }
   }
-  -- use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use { 'numToStr/Comment.nvim',
@@ -45,7 +45,6 @@ packer.startup(function(use)
     }
   }
   use 'norcalli/nvim-colorizer.lua'
-  use 'folke/zen-mode.nvim'
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,

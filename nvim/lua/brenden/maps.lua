@@ -32,6 +32,9 @@ keymap.set('n', '<leader>w', ':w<CR>')
 
 -- keymap.set('n', '<leader>f', ':NvimTreeToggle<CR>')
 
+-- Rename
+keymap.set('n', '<leader>rnl', ':%s/<c-r><c-w>/<c-r><c-w>')
+keymap.set('n', '<leader>rng', ':%s/<c-r><c-w>/<c-r><c-w>/gc<c-f>$F/i')
 
 -- Close buffer
 keymap.set('n', '<leader>q', ':q<CR>')

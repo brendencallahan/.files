@@ -10,20 +10,26 @@ require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
     side = 'right',
-    width = 15,
+    width = 20,
+    preserve_window_proportions = true,
     adaptive_size = false,
     mappings = {
       list = {
         { key = "o", action = "cd" },
-        { key = "<C-v>", action = "vsplit" },
-        { key = "<C-h>", action = "split" },
-        { key = "<C-t>", action = "tabnew" },
+        { key = "v", action = "vsplit" },
+        { key = "h", action = "split" },
+        { key = "t", action = "tabnew" },
         { key = "u", action = "dir_up" },
       },
     },
   },
   renderer = {
     group_empty = false,
+    highlight_opened_files = 'icon',
+    indent_width = 1,
+    icons = {
+      webdev_colors = true,
+    }
   },
   filters = {
     dotfiles = false,
