@@ -1,3 +1,15 @@
+# Welcome message
+echo "    ⢰⣿⡿⠗⠀⠠⠄⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⡜⠁⠀⠀⠀⠀⠀⠈⠑⢶⣶⡄
+⢀⣶⣦⣸⠀⢼⣟⡇⠀⠀⢀⣀⠀⠘⡿⠃
+⠀⢿⣿⣿⣄⠒⠀⠠⢶⡂⢫⣿⢇⢀⠃⠀
+⠀⠈⠻⣿⣿⣿⣶⣤⣀⣀⣀⣂⡠⠊⠀⠀
+⠀⠀⠀⠃⠀⠀⠉⠙⠛⠿⣿⣿⣧⠀⠀⠀
+⠀⠀⠘⡀⠀⠀⠀⠀⠀⠀⠘⣿⣿⡇⠀⠀
+⠀⠀⠀⣷⣄⡀⠀⠀⠀⢀⣴⡟⠿⠃⠀⠀
+⠀⠀⠀⢻⣿⣿⠉⠉⢹⣿⣿
+" | lolcat
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -6,7 +18,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -15,7 +27,6 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# Default archcraft theme is "archcraft"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -49,7 +60,7 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -125,9 +136,38 @@ rehash_precmd() {
 
 add-zsh-hook -Uz precmd rehash_precmd
 
+# Requires https://github.com/caarlos0/timer to be installed. spd-say should ship with your distro
+
+declare -A pomo_options
+pomo_options["work"]="50"
+pomo_options["break"]="10"
+
+pomodoro () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+  val=$1
+  echo $val | lolcat
+  timer ${pomo_options["$val"]}m
+  espeak -a 50 "'$val' session done"
+  fi
+}
+
+# Aliases
+########################################################################################
+
+
+# pomodoro timer
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"
+
+# vim
+alias nv='nvim'
+
 # omz
 alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
+
+# dir navigation
+alias projects='cd /home/kent/Projects'
 
 # ls
 alias l='ls -lh'
@@ -142,38 +182,7 @@ alias gcl='git clone --depth 1'
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
-alias gp='git push origin master'
-
-# nvidia GPU
-alias nvswitch='optimus-manager --no-confirm --switch nvidia'
-
-# terabyte HDD
-alias home='cd /home/kent/Data/'
-alias projects='cd /home/kent/Data/Projects/'
-alias tests='cd /home/kent/Data/Tests/'
-alias books='cd /home/kent/Data/documents/books/'
-
-# brightness control
-alias bl='light -S'
-
-# Distrobox commands
-alias dbox-create='distrobox-create --root'
-alias dbox-enter='distrobox-enter --root'
-alias dbox-ls='distrobox-list --root'
-alias dbox-rm='distrobox-rm --root'
-alias dbox-upgrade='distrobox-upgrade --root'
-alias dbox-export='distrobox-export --root'
-alias dbox-host-exec='distrobox-host-exec --root'
-alias dbox-init='distrobox-init --root'
-
-# Neofetch
-alias nf='neofetch'
-
-# Neovim
-alias nv='nvim'
-
-# Vim
-alias v='vim'
+alias gp='git push'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
