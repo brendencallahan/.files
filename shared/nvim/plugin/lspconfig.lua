@@ -72,6 +72,18 @@ nvim_lsp.flow.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.quick_lint_js.setup {
+  on_attach = on_attach,
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+  capabilities = capabilities
+}
+
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
@@ -116,16 +128,12 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.astro.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
   update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
+  virtual_text = { spacing = 2, prefix = "●" },
   severity_sort = true,
 }
 )
