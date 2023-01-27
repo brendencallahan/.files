@@ -1,6 +1,7 @@
 local keymap = vim.keymap
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 keymap.set('n', 'x', '"_x')
 
@@ -8,15 +9,18 @@ keymap.set('n', 'x', '"_x')
 -- keymap.set('n', '+', '<C-a>')
 -- keymap.set('n', '-', '<C-x>')
 
+-- Escape in insert mode
+keymap.set('i', 'df', '<esc>')
+
 -- Registers
 --yank selection to clipboard
-keymap.set('n', '<leader>yc', '"+y')
-keymap.set('v', '<leader>yc', '"+y')
-keymap.set('n', '<leader>Yc', '"+Y')
-keymap.set('v', '<leader>Yc', '"+Y')
+keymap.set('n', '<leader>cy', '"+y')
+keymap.set('v', '<leader>cy', '"+y')
+keymap.set('n', '<leader>cY', '"+Y')
+keymap.set('v', '<leader>cY', '"+Y')
 -- paste clipboard
-keymap.set('n', '<leader>pc', '"+p')
-keymap.set('n', '<leader>Pc', '"+P')
+keymap.set('n', '<leader>cp', '"+p')
+keymap.set('n', '<leader>cP', '"+P')
 -- paste most recent yank, 'd', 'x', etc. doesn't overwrite
 keymap.set('n', '<leader>py', '"0p')
 keymap.set('n', '<leader>Py', '"0P')
@@ -27,14 +31,9 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save all
 keymap.set('n', '<leader>w', ':w<CR>')
 
--- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
-
--- keymap.set('n', '<leader>f', ':NvimTreeToggle<CR>')
-
 -- Rename
-keymap.set('n', '<leader>rnl', ':%s/<c-r><c-w>/<c-r><c-w>')
-keymap.set('n', '<leader>rng', ':%s/<c-r><c-w>/<c-r><c-w>/gc<c-f>$F/i')
+keymap.set('n', '<leader>rs', ':%s/<c-r><c-w>/&/g<left><left>')
+keymap.set('n', '<leader>rn', ':%s/\\<<c-r><c-w>\\>/&/g<left><left>')
 
 -- Close buffer
 keymap.set('n', '<leader>q', ':q<CR>')
@@ -62,3 +61,6 @@ keymap.set('n', '<leader>rl', '<C-w><')
 keymap.set('n', '<leader>rh', '<C-w>>')
 keymap.set('n', '<leader>rk', '<C-w>+')
 keymap.set('n', '<leader>rj', '<C-w>-')
+
+-- Save with root permission (not working for now)
+--vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
