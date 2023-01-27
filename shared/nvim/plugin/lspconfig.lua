@@ -32,30 +32,30 @@ local on_attach = function(client, bufnr)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', '<leader>D', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   -- buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  -- buf_set_keymap('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', '<leader>pi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   -- buf_set_keymap('n', '<leader>h', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
 protocol.CompletionItemKind = {
-  '', -- Text
+  '', -- Text
   '', -- Method
   '', -- Function
-  '', -- Constructor
+  '', -- Constructor
   '', -- Field
-  '', -- Variable
-  '', -- Class
-  'ﰮ', -- Interface
+  '', -- Variable
+  'ﴯ', -- Class
+  '', -- Interface
   '', -- Module
   '', -- Property
   '', -- Unit
   '', -- Value
   '', -- Enum
   '', -- Keyword
-  '﬌', -- Snippet
+  '', -- Snippet
   '', -- Color
   '', -- File
   '', -- Reference
-  '', -- Folder
+  '', -- Folder
   '', -- EnumMember
   '', -- Constant
   '', -- Struct

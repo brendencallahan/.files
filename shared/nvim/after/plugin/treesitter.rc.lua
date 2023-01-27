@@ -14,7 +14,6 @@ ts.setup {
     "markdown",
     "tsx",
     "toml",
-    "fish",
     "javascript",
     "typescript",
     "json",
@@ -30,4 +29,3 @@ ts.setup {
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
-parser_config.javascript.filetype_to_parsername = { "tsx", "typescript.tsx" }
