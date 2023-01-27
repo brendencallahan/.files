@@ -7,8 +7,8 @@ require('onedark').setup {
     transparent = 'true'
   },
   highlights = {
-    visual = { bg = '#fbf1c7', fmt = 'bold' }, --bg = '#fbf1c7'
-    cursorLine = { fg = '#fbf1c7' },
+    visual = { bg = '#171821', fmt = 'bold' }, --bg = '#fbf1c7' #5a626f
+    cursorLine = { bg = '#171821', fmt = 'bold' },
   },
 }
 require('onedark').load()
