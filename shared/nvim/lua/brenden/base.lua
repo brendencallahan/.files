@@ -1,8 +1,10 @@
 vim.cmd("autocmd!")
 
 -- Floating windows prettier :)
-vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "NONE", fg = "NONE"})
-vim.api.nvim_set_hl(0, "PMenu", {  bg = "NONE", fg = "NONE"})
+vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "PMenu", {  bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "Normal", { bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "FloatBorder", {  bg = "#2d2c35", fg = "NONE"})
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'

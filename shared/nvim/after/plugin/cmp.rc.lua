@@ -22,12 +22,12 @@ local function formatForTailwindCSS(entry, vim_item)
 end
 
 
-vim.api.nvim_set_hl(0, "MyNormal", { bg = "NONE", fg = "NONE"})
-vim.api.nvim_set_hl(0, "MyFloatBorder", {  bg = "NONE", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemMenu", {  bg = "NONE", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemAbbr", {  bg = "NONE", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", {  bg = "NONE", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", {  bg = "NONE", fg = "NONE"})
+vim.api.nvim_set_hl(0, "MyNormal", { bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "MyFloatBorder", {  bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "CmpItemMenu", {  bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "CmpItemAbbr", {  bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", {  bg = "#2d2c35", fg = "NONE"})
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", {  bg = "#2d2c35", fg = "NONE"})
 
 cmp.setup({
   snippet = {
