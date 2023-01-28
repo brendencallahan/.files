@@ -8,36 +8,42 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   -- use 'folke/zen-mode.nvim'
-  -- use 'mg979/vim-visual-multi' --multicursor/find+replace *just use vim built-in features
-  use 'wbthomason/packer.nvim'
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'navarasu/onedark.nvim'
-  use 'nvim-lualine/lualine.nvim' -- Statusline
-  use 'nvim-lua/plenary.nvim' -- Common utilities
-  use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
-  use 'neovim/nvim-lspconfig' -- LSP
-  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  use 'wbthomason/packer.nvim' --Package manager
 
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
-  use 'L3MON4D3/LuaSnip'
-  use 'ray-x/lsp_signature.nvim'
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+  -- Colors/Menus
+  use 'navarasu/onedark.nvim' -- Colorscheme
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'nvim-telescope/telescope.nvim'
+  use 'norcalli/nvim-colorizer.lua'
   use {
-    'nvim-tree/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua', -- File explorer
     requires = {
-      'kyazdani42/nvim-web-devicons'
+      'kyazdani42/nvim-web-devicons' -- icons
     }
   }
+  use 'lukas-reineke/indent-blankline.nvim' -- Highlights vertical bars indicating scope
+
+  -- Status lines/Live grep
+  use 'akinsho/bufferline.nvim' -- Menu for buffer navigation
+  use 'nvim-lualine/lualine.nvim' -- Statusline on bottom
+  use 'nvim-telescope/telescope.nvim' -- Popup menu for ripgrepping
+
+  -- Language server
+  use 'williamboman/mason.nvim' -- Automagically setup lsp servers
+  use 'williamboman/mason-lspconfig.nvim' -- help automagic work
+  use 'nvim-lua/plenary.nvim' -- helper lua functions for plugins
+  use 'onsails/lspkind.nvim' -- VSCode like icons for lsp
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
+
+  -- Autocompletion
+  use 'neovim/nvim-lspconfig' -- easier configs
+  use 'hrsh7th/cmp-nvim-lsp-signature-help' -- display function signatures (params)
+  use 'hrsh7th/cmp-nvim-lsp' -- neovim's LSP
+  use 'hrsh7th/cmp-path' -- file paths
+  use 'hrsh7th/cmp-buffer' -- buffer words
+  use 'hrsh7th/cmp-cmdline' -- command line
+  use 'hrsh7th/nvim-cmp' -- Completion
+
+  -- Convenient 'dumb' autocomplete
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use { 'numToStr/Comment.nvim',
@@ -45,12 +51,25 @@ packer.startup(function(use)
       'JoosepAlviste/nvim-ts-context-commentstring'
     }
   }
-  use 'norcalli/nvim-colorizer.lua'
-  use 'akinsho/bufferline.nvim'
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
 
-  -- Free copilot alternative
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
+  -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'jose-elias-alvarez/null-ls.nvim'
+  --
+  -- Better syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
+
+  -- Alternative to cmp-nvim-lsp-signature-help
+  --use 'ray-x/lsp_signature.nvim'
+
+  -- (free) Alternative to copilot
   -- Be sure to run :Codeium Auth
   -- use { 'Exafunction/codeium.vim',
   -- config = function()

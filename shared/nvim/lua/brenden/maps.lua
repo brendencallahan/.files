@@ -1,13 +1,12 @@
 local keymap = vim.keymap
 
+-- Space as leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Deleting character doesn't overwrite delete buffer
 keymap.set('n', 'x', '"_x')
-
--- Increment/decrement
--- keymap.set('n', '+', '<C-a>')
--- keymap.set('n', '-', '<C-x>')
+keymap.set('v', 'x', '"_x')
 
 -- Escape in insert mode
 keymap.set('i', 'df', '<esc>')
@@ -31,9 +30,11 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save all
 keymap.set('n', '<leader>w', ':w<CR>')
 
--- Rename
-keymap.set('n', '<leader>rs', ':%s/<c-r><c-w>/&/g<left><left>')
-keymap.set('n', '<leader>rn', ':%s/\\<<c-r><c-w>\\>/&/g<left><left>')
+-- Rename (with confirmation)
+-- substring
+keymap.set('n', '<leader>rs', ':%s/<c-r><c-w>/&/gc<left><left>')
+-- word
+keymap.set('n', '<leader>rn', ':%s/\\<<c-r><c-w>\\>/&/gc<left><left><left>')
 
 -- Close buffer
 keymap.set('n', '<leader>q', ':q<CR>')
@@ -49,18 +50,15 @@ keymap.set('n', '<leader>tl', 'gt')
 keymap.set('n', '<leader>sh', ':split<Return><C-w>w')
 keymap.set('n', '<leader>sv', ':vsplit<Return><C-w>w')
 
--- Move window
-keymap.set('n', '<leader><Space>', '<C-w>w')
-keymap.set('', '<leader>h', '<C-w>h')
-keymap.set('', '<leader>k', '<C-w>k')
-keymap.set('', '<leader>j', '<C-w>j')
-keymap.set('', '<leader>l', '<C-w>l')
-
 -- Resize window
 keymap.set('n', '<leader>rl', '<C-w><')
 keymap.set('n', '<leader>rh', '<C-w>>')
 keymap.set('n', '<leader>rk', '<C-w>+')
 keymap.set('n', '<leader>rj', '<C-w>-')
 
--- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+-- Move to window
+keymap.set('n', '<leader><Space>', '<C-w>w')
+keymap.set('', '<leader>h', '<C-w>h')
+keymap.set('', '<leader>k', '<C-w>k')
+keymap.set('', '<leader>j', '<C-w>j')
+keymap.set('', '<leader>l', '<C-w>l')

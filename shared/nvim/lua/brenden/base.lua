@@ -1,5 +1,9 @@
 vim.cmd("autocmd!")
 
+-- Floating windows prettier :)
+vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "NONE", fg = "NONE"})
+vim.api.nvim_set_hl(0, "PMenu", {  bg = "NONE", fg = "NONE"})
+
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
@@ -22,7 +26,7 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.shell = 'zsh'
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = 'nosplit'
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true
 vim.opt.breakindent = true
@@ -37,12 +41,3 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
--- Turn off paste mode when leaving insert
-vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste"
-})
-
--- Add asterisks in block comments
-vim.opt.formatoptions:append { 'r' }
-vim.opt.formatoptions:append { 'r' }

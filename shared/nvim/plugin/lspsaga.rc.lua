@@ -3,7 +3,7 @@ if (not status) then return end
 
 saga.setup({
   ui = {
-    winblend = 10,
+    winblend = 5,
     border = 'rounded',
     colors = {
       normal_bg = '#2d2c35',
@@ -23,27 +23,29 @@ saga.setup({
     quit = 'q',
     close = '<Esc>',
   },
-  rename_action_keys = {
-    quit = '<C-c>',
-    exec = '<CR>'
-  }
 })
 
 local opts = { noremap = true, silent = true }
 
+-- Format on keypress
+vim.keymap.set('n', '<leader>fs', function() vim.lsp.buf.format { async = true } end, opts)
+
+-- Jump diagnostics
 vim.keymap.set('n', '<C-k>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+
+-- Hover
 vim.keymap.set('n', '<leader>pl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
 vim.keymap.set('n', '<leader>ph', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', '<leader>d', '<Cmd>Lspsaga lsp_finder<CR>', opts)
--- vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
--- vim.keymap.set('n', '<leader>py', '<Cmd>Lspsaga signature_help<CR>', opts)
--- vim.keymap.set('i', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
--- vim.keymap.set('n', '<leader>pY', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
+vim.keymap.set('n', '<leader>ps', '<Cmd>Lspsaga signature_help<CR>', opts)
+--vim.keymap.set('i', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+--vim.keymap.set('n', '<leader>ps', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 vim.keymap.set('n', '<leader>pd', '<Cmd>Lspsaga peek_definition<CR>', opts)
-vim.keymap.set('n', '<leader>pD', '<Cmd>Lspsaga goto_definition<CR>', opts)
---vim.keymap.set('n', '<leader>rnl', '<Cmd>Lspsaga rename<CR>', opts)
---vim.keymap.set('n', '<leader>rng', '<Cmd>Lspsaga rename ++project<CR>', opts)
+vim.keymap.set('n', '<leader>pgd', '<Cmd>Lspsaga goto_definition<CR>', opts)
+vim.keymap.set('n', '<leader>prl', '<Cmd>Lspsaga rename<CR>', opts)
+vim.keymap.set('n', '<leader>prg', '<Cmd>Lspsaga rename ++project<CR>', opts)
 vim.keymap.set({ 'n', 't' }, '<leader>tt', '<Cmd>Lspsaga term_toggle<CR>', opts)
 
 -- code action

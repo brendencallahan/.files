@@ -3,12 +3,6 @@ if (not status) then return end
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
--- local function telescope_buffer_dir()
---   return vim.fn.expand('%:p:h')
--- end
-
--- local fb_actions = require "telescope".extensions.file_browser.actions
-
 telescope.setup {
   defaults = {
     mappings = {
@@ -20,30 +14,8 @@ telescope.setup {
       },
     },
   },
-  --extensions = {
-  --  file_browser = {
-  --    initial_mode = "normal",
-  --    theme = "dropdown",
-  --    -- disables netrw and use telescope-file-browser in its place
-  --    hijack_netrw = true,
-  --    mappings = {
-  --      -- your custom insert mode mappings
-  --      ["n"] = {
-  --        -- your custom normal mode mappings
-  --        ["a"] = fb_actions.create,
-  --        ["r"] = fb_actions.rename,
-  --        ["d"] = fb_actions.remove,
-  --        ["c"] = fb_actions.copy,
-  --        ["m"] = fb_actions.move,
-  --        ["u"] = fb_actions.goto_parent_dir,
-  --      },
-  --    },
-  --  },
-  --},
 }
-
---telescope.load_extension("file_browser")
-
+-- Grep files
 vim.keymap.set('n', '<leader>rf',
   function()
     builtin.find_files({
@@ -51,30 +23,22 @@ vim.keymap.set('n', '<leader>rf',
       hidden = true
     })
   end)
+-- Grep live
 vim.keymap.set('n', '<leader>rg', function()
   builtin.live_grep()
 end)
--- vim.keymap.set('n', '<leader>gb', function()
---   builtin.buffers()
--- end)
+-- Grep tags
 vim.keymap.set('n', '<leader>rt', function()
   builtin.help_tags()
 end)
+-- Grep resume
 vim.keymap.set('n', '<leader>rr', function()
   builtin.resume()
 end)
+-- Grep diagnostics
 vim.keymap.set('n', '<leader>rd', function()
   builtin.diagnostics()
 end)
---vim.keymap.set("n", "<leader>f", function()
---  telescope.extensions.file_browser.file_browser({
---    path = "%:p:h",
---    cwd = telescope_buffer_dir(),
---    respect_gitignore = false,
---    hidden = true,
---    grouped = true,
---    -- previewer = false,
---    initial_mode = "normal",
---    layout_config = { height = 20 }
---  })
+-- vim.keymap.set('n', '<leader>gb', function()
+--   builtin.buffers()
 -- end)
