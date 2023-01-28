@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true
-vim.opt.winblend = 100
+vim.opt.winblend = 10
 vim.opt.wildoptions = 'pum'
 vim.opt.pumblend = 0
 vim.opt.background = 'dark'

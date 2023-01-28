@@ -9,14 +9,15 @@ require('onedark').setup {
   highlights = {
     Visual = { bg = '#171821', fmt = 'bold' }, --bg = '#fbf1c7' #5a626f
     CursorLine = { bg = '#171821', fmt = 'bold' },
-    Terminal = { bg = 'NONE', fg = 'NONE' },
-    Pmenu = { bg = 'NONE', fg = 'NONE' },
-    PmenuSbar = { bg = 'NONE', fg = 'NONE' },
-    PmenuSel = { bg = 'NONE', fg = 'NONE' },
-    PmenuThumb = { bg = 'NONE', fg = 'NONE' },
-    WildMenu = { bg = 'NONE', fg = 'NONE' },
-    NormalFloat = { bg = 'NONE', fg = 'NONE' },
-    FloatBorder = { bg = 'NONE', fg = 'NONE' },
+    Terminal = { bg = '#2d2c35' },
+    Pmenu = { bg = '#2d2c35' },
+    PmenuSbar = { bg = '#2d2c35' },
+    PmenuSel = { bg = '#2d2c35' },
+    PmenuThumb = { bg = '#2d2c35' },
+    WildMenu = { bg = '#2d2c35' },
+    Normal = { bg = '#2d2c35'},
+    NormalFloat = { bg = '#2d2c35' },
+    FloatBorder = { bg = '#2d2c35' },
   },
 }
 require('onedark').load()
