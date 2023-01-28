@@ -22,6 +22,8 @@ require('onedark').setup {
 }
 require('onedark').load()
 
+vim.cmd[[hi CurrentWord guifg=NONE guibg=NONE]]
+
 -- Floating windows prettier :)
 -- vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "NONE", fg = "NONE"})
 -- vim.api.nvim_set_hl(0, "PmenuThumb", {  bg = "NONE", fg = "NONE"})
