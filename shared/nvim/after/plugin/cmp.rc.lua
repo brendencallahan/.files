@@ -21,14 +21,6 @@ local function formatForTailwindCSS(entry, vim_item)
   return vim_item
 end
 
-
-vim.api.nvim_set_hl(0, "MyNormal", { bg = "#2d2c35", fg = "NONE"})
-vim.api.nvim_set_hl(0, "MyFloatBorder", {  bg = "#2d2c35", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemMenu", {  bg = "#2d2c35", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemAbbr", {  bg = "#2d2c35", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", {  bg = "#2d2c35", fg = "NONE"})
-vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", {  bg = "#2d2c35", fg = "NONE"})
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -37,10 +29,8 @@ cmp.setup({
   },
   window = {
     completion = cmp.config.window.bordered({
-      winhighlight = "Normal:MyNormal,FloatBorder:MyFloatBorder",
     }),
     documentation = cmp.config.window.bordered({
-      winhighlight = "Normal:MyNormal,FloatBorder:MyFloatBorder",
     }),
   },
   mapping = cmp.mapping.preset.insert({
@@ -94,10 +84,8 @@ cmp.setup({
 cmp.setup.cmdline({ '/', '?' }, {
   window = {
     completion = cmp.config.window.bordered({
-      winhighlight = "Normal:MyNormal,FloatBorder:MyFloatBorder",
     }),
     documentation = cmp.config.window.bordered({
-      winhighlight = "Normal:MyNormal,FloatBorder:MyFloatBorder",
     }),
   },
   mapping = cmp.mapping.preset.cmdline(),
@@ -110,10 +98,8 @@ cmp.setup.cmdline({ '/', '?' }, {
 cmp.setup.cmdline(':', {
   window = {
     completion = cmp.config.window.bordered({
-      winhighlight = "Normal:MyNormal,FloatBorder:MyFloatBorder",
     }),
     documentation = cmp.config.window.bordered({
-      winhighlight = "Normal:MyNormal,FloatBorder:MyFloatBorder",
     }),
   },
   mapping = cmp.mapping.preset.cmdline(),
@@ -125,12 +111,12 @@ cmp.setup.cmdline(':', {
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['tsserver'].setup {
-    capabilities = capabilities
-  }
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['tsserver'].setup {
+  capabilities = capabilities
+}
 
--- vim.cmd [[
-  -- set completeopt=menuone,noinsert,noselect
-  -- highlight! default link CmpItemKind CmpItemMenuDefault
--- ]]
+vim.cmd [[
+set completeopt=menuone,noinsert,noselect
+highlight! default link CmpItemKind CmpItemMenuDefault
+]]
