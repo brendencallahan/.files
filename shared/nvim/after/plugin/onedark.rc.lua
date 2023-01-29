@@ -22,7 +22,9 @@ require('onedark').setup {
 }
 require('onedark').load()
 
-vim.cmd[[hi CurrentWord guifg=NONE guibg=NONE]]
+-- vim.cmd[[hi def IlluminatedWordText gui=NONE guibg=#171821]]
+-- vim.cmd[[hi def IlluminatedWordRead gui=NONE guibg=#171821]]
+-- vim.cmd[[hi def IlluminatedWordWrite gui=NONE guibg=#171821]]
 
 -- Floating windows prettier :)
 -- vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "NONE", fg = "NONE"})

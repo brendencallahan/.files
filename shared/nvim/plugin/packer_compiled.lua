@@ -223,11 +223,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kent/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  vim_current_word = {
-    loaded = true,
-    path = "/home/kent/.local/share/nvim/site/pack/packer/start/vim_current_word",
-    url = "https://github.com/dominikduda/vim_current_word"
   }
 }
 

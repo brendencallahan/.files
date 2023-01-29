@@ -13,6 +13,7 @@ packer.startup(function(use)
   -- Colors/Menus
   use 'navarasu/onedark.nvim' -- Colorscheme
   use 'kyazdani42/nvim-web-devicons' -- File icons
+  -- use 'rrethy/vim-illuminate' -- Highlight occurences under word
   use 'norcalli/nvim-colorizer.lua' -- Preview colors (like hex code as background)
   use {
     'nvim-tree/nvim-tree.lua', -- File explorer
