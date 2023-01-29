@@ -57,12 +57,12 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.quick_lint_js.setup {
-  on_attach = on_attach,
-  filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
-  cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
-}
+-- nvim_lsp.quick_lint_js.setup {
+--   on_attach = on_attach,
+--   filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
+--   cmd = { "typescript-language-server", "--stdio" },
+--   capabilities = capabilities
+-- }
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
