@@ -64,10 +64,10 @@ nvim_lsp.cssls.setup {
 --   capabilities = capabilities
 -- }
 
-nvim_lsp.vtsls.setup {
+nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "vtsls", "--stdio" },
+  cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
 
