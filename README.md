@@ -56,6 +56,7 @@ This is not needed now, but in the future to update plugins
 ```
 
 I make use of prettier_d and eslint_d.
+
 To install/update language servers and parsers (including prettier_d and eslint_d).
 
 ```
