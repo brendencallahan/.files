@@ -51,7 +51,7 @@ keymap.set('n', '<leader>mn', ':mark ', loudOpts)
 keymap.set('n', '<leader>ml', ':marks<CR>', loudOpts)
 
 -- Tab creation/navigation
-keymap.set('n', '<leader>tn', ':tabedit', silentOpts)
+keymap.set('n', '<leader>tn', ':tabedit<space>', loudOpts)
 keymap.set('n', '<leader>tq', ':tabclose<CR>', silentOpts)
 keymap.set('n', '<leader>th', 'gT', silentOpts)
 keymap.set('n', '<leader>tl', 'gt', silentOpts)
