@@ -44,6 +44,11 @@ keymap.set('n', '<CR>', ':noh<CR><CR>', silentOpts)
 keymap.set('n', '<leader>q', ':q<CR>', silentOpts)
 keymap.set('n', '<leader>!', ':q!<CR>', silentOpts)
 
+-- Marks
+keymap.set('n', '<leader>pn', '<C-I>', silentOpts)
+keymap.set('n', '<leader>pb', '<C-o>', silentOpts)
+keymap.set('n', '<leader>mn', ':mark ', loudOpts)
+
 -- Tab creation/navigation
 keymap.set('n', '<leader>tn', ':tabedit', silentOpts)
 keymap.set('n', '<leader>tq', ':tabclose<CR>', silentOpts)
