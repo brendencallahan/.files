@@ -21,10 +21,17 @@ tterm.setup({
   float_opts = {
     border = 'curved'
   },
+  shade_terminals = false,
 })
 
 vim.cmd[[
 autocmd TermEnter term://*toggleterm#*
       \ tnoremap <silent><leader>tt <Cmd>exe v:count1 . "ToggleTerm"<CR>
 ]]
+
+vim.cmd[[
+autocmd TermEnter term://*toggleterm#*
+      \ tnoremap <silent><leader>tq <C-d>
+]]
+
 vim.cmd[[nnoremap <silent><leader>tt <Cmd>exe v:count1 . "ToggleTerm"<CR>]]
