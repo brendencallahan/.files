@@ -9,6 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- use 'folke/zen-mode.nvim'
   use 'wbthomason/packer.nvim' --Package manager
+  use 'akinsho/toggleterm.nvim'
 
   -- Colors/Menus
   use 'navarasu/onedark.nvim' -- Colorscheme

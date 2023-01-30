@@ -5,6 +5,11 @@ local builtin = require("telescope.builtin")
 
 telescope.setup {
   defaults = {
+    layout_config = {
+      horizontal = {
+        preview_cutoff = 0,
+      },
+    },
     mappings = {
       n = {
         ["q"] = actions.close,

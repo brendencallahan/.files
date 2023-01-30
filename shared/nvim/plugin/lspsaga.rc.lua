@@ -46,7 +46,7 @@ vim.keymap.set('n', '<leader>pd', '<Cmd>Lspsaga peek_definition<CR>', opts)
 vim.keymap.set('n', '<leader>pgd', '<Cmd>Lspsaga goto_definition<CR>', opts)
 vim.keymap.set('n', '<leader>prl', '<Cmd>Lspsaga rename<CR>', opts)
 vim.keymap.set('n', '<leader>prg', '<Cmd>Lspsaga rename ++project<CR>', opts)
-vim.keymap.set({ 'n', 't' }, '<leader>tt', '<Cmd>Lspsaga term_toggle<CR>', opts)
+-- vim.keymap.set({ 'n', 't' }, '<leader>tt', '<Cmd>Lspsaga term_toggle<CR>', opts)
 
 -- code action
 local codeaction = require("lspsaga.codeaction")
