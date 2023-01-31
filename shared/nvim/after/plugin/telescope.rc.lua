@@ -5,9 +5,12 @@ local builtin = require("telescope.builtin")
 
 telescope.setup {
   defaults = {
+    layout_strategy = 'vertical',
     layout_config = {
-      horizontal = {
+      vertical = {
+        prompt_position = 'bottom',
         preview_cutoff = 0,
+        preview_height = 0.6
       },
     },
     mappings = {
