@@ -65,6 +65,8 @@ To install/update language servers and parsers (including prettier_d and eslint_
 :Mason
 ```
 
+If you would like to change 'brenden' to something else, you can do so by editing `init.lua` and `lua/brenden`.
+
 ## ZSH
 For information on installing the powerlevel10k zsh theme visit:
 https://github.com/romkatv/powerlevel10k
