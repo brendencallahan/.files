@@ -22,11 +22,13 @@ cp -r ~/.config/nvim ~/.config/nvim-backup
 rm -rf ~/.config/nvim
 ```
 
-Then clone this repo, cd into it then (or just clone the nvim folder)
+Then clone this repo, cd into it and
 
 ```bash
 cp -r shared/nvim ~/.config/nvim
 ```
+(you can also just clone the nvim folder)
+
 
 Next, install packer with
 
