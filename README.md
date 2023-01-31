@@ -12,6 +12,8 @@ Delete that at the bottom of desktop/bspwm/.bspwmrc if you want to use it.
 
 
 ## Neovim
+#### shared/nvim
+
 Be sure to look at ~/.config/nvim/lua/brenden/maps.lua for *some* of the keybindings.
 One useful one is `<leader>fe` for opening nvim-tree.
 
