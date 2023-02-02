@@ -231,6 +231,7 @@ apply_compositor() {
 		-e "s/shadow-offset-y = .*/shadow-offset-y = $picom_shadow_y;/g" \
 		-e "s/method = .*/method = \"$picom_blur_method\";/g" \
 		-e "s/strength = .*/strength = $picom_blur_strength;/g"
+		-e "s/deviation = .*/deviation = $picom_blur_deviation;/g"
 }
 
 # BSPWM -------------------------------------

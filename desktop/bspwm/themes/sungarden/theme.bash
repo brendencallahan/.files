@@ -33,10 +33,10 @@ wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 wallpaper="/usr/share/backgrounds/sungarden.png"
 
 # Polybar
-polybar_font='Iosevka Nerd Font:size=10;3'
+polybar_font='JetBrainsMono Nerd Font:size=10;3'
 
 # Rofi
-rofi_font='Iosevka 10'
+rofi_font='JetBrains Mono 10'
 rofi_icon='Papirus-Apps'
 
 # Terminal
@@ -58,7 +58,7 @@ dunst_width='300'
 dunst_height='80'
 dunst_offset='10x40'
 dunst_origin='top-right'
-dunst_font='Iosevka Custom 9'
+dunst_font='JetBrains Mono 9'
 dunst_border='2'
 dunst_separator='2'
 
@@ -69,8 +69,9 @@ picom_shadow_r='14'
 picom_shadow_o='0.30'
 picom_shadow_x='-12'
 picom_shadow_y='-12'
-picom_blur_method='none'
-picom_blur_strength='0'
+picom_blur_method='dual_kawase'
+picom_blur_strength='10'
+picom_blur_deviation='1.0'
 
 # Bspwm
 bspwm_fbc="$accent"
