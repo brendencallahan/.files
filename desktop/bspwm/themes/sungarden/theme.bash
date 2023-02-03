@@ -59,7 +59,7 @@ dunst_height='80'
 dunst_offset='10x40'
 dunst_origin='top-right'
 dunst_font='JetBrains Mono 9'
-dunst_border='2'
+dunst_border='0'
 dunst_separator='2'
 
 # Picom
@@ -70,7 +70,7 @@ picom_shadow_o='0.30'
 picom_shadow_x='-12'
 picom_shadow_y='-12'
 picom_blur_method='dual_kawase'
-picom_blur_strength='10'
+picom_blur_strength='5'
 picom_blur_deviation='1.0'
 
 # Bspwm
