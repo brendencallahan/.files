@@ -122,11 +122,11 @@ ctrl + alt + {Left,Right}
 
 # Switch workspace or Send focused Node to another workspace
 super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}' '--follow'
+	bspc {desktop -f,node -d} '^{1-8}'
 
 # Send focused Node to workspace directionally
 super + ctrl + shift + {Left,Right}
-	bspc node -d {prev,next} '--follow'
+	bspc node -d {prev,next}
 
 # Change focus of the Node or Swap Nodes
 super + {_,shift + }{Left,Down,Up,Right}
