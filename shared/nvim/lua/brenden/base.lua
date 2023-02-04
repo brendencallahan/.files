@@ -10,6 +10,7 @@ vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
+vim.opt.signcolumn = 'yes:1'
 
 vim.opt.title = true
 vim.opt.autoindent = true

@@ -12,6 +12,9 @@ ts.setup {
   },
   ensure_installed = {
     "markdown",
+    "python",
+    "gitignore",
+    "dockerfile",
     "tsx",
     "toml",
     "javascript",

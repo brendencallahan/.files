@@ -15,12 +15,17 @@ require('onedark').setup {
     PmenuSel = { bg = '#2d2c35' },
     PmenuThumb = { bg = '#2d2c35' },
     WildMenu = { bg = '#2d2c35' },
-    Normal = { bg = '#2d2c35'},
+    Normal = { bg = '#2d2c35' },
     NormalFloat = { bg = '#2d2c35' },
     FloatBorder = { bg = '#2d2c35' },
+    DiagnosticVirtualTextError = { bg = "NONE" },
+    DiagnosticVirtualTextWarn = { bg = "NONE" },
+    DiagnosticVirtualTextInfo = { bg = "NONE" },
+    DiagnosticVirtualTextHint = { bg = "NONE" },
   },
 }
 require('onedark').load()
+
 
 -- vim.cmd[[hi def IlluminatedWordText gui=NONE guibg=#171821]]
 -- vim.cmd[[hi def IlluminatedWordRead gui=NONE guibg=#171821]]
