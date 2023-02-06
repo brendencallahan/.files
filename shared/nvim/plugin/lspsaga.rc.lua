@@ -19,7 +19,7 @@ saga.setup({
     scroll_down = "<C-d>",
     scroll_up = "<C-u>",
   },
-  defenition_action_keys = {
+  definition_action_keys = {
     quit = 'q',
     close = '<Esc>',
   },
