@@ -48,6 +48,7 @@ keymap.set('n', '<leader>!', ':q!<CR>', silentOpts)
 keymap.set('n', '<leader>pn', '<C-I>', silentOpts)
 keymap.set('n', '<leader>pb', '<C-o>', silentOpts)
 keymap.set('n', '<leader>mn', ':mark ', loudOpts)
+keymap.set('n', '<leader>md', ':delmarks ', loudOpts)
 keymap.set('n', '<leader>ml', ':marks<CR>', loudOpts)
 
 -- Tab creation/navigation
