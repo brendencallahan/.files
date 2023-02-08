@@ -57,6 +57,13 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.jedi_language_server.setup {
+  on_attach = on_attach,
+  filetypes = { "python" },
+  cmd = { "jedi_language_server" },
+  capabilities = capabilities
+}
+
 -- nvim_lsp.quick_lint_js.setup {
 --   on_attach = on_attach,
 --   filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
