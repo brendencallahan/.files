@@ -10,7 +10,7 @@ super + Return
 
 # Alt Terminal (alacritty)
 super + a
-	bspterm
+  alacritty
 
 # Terminal (floating)
 super + shift + Return
