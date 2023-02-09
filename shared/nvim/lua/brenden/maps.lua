@@ -23,8 +23,8 @@ keymap.set('v', '<leader>cY', '"+Y', silentOpts)
 keymap.set('n', '<leader>cp', '"+p', silentOpts)
 keymap.set('n', '<leader>cP', '"+P', silentOpts)
 -- paste most recent yank, 'd', 'x', etc. doesn't overwrite
-keymap.set('n', '<leader>py', '"2p', silentOpts)
-keymap.set('n', '<leader>Py', '"2P', silentOpts)
+keymap.set('n', '<leader>py', '"0p', silentOpts)
+keymap.set('n', '<leader>Py', '"0P', silentOpts)
 
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G', silentOpts)
@@ -47,6 +47,7 @@ keymap.set('n', '<leader>!', ':q!<CR>', silentOpts)
 -- Marks
 keymap.set('n', '<leader>pn', '<C-I>', silentOpts)
 keymap.set('n', '<leader>pb', '<C-o>', silentOpts)
+keymap.set('n', '<leader>m', '`', loudOpts)
 keymap.set('n', '<leader>mn', ':mark ', loudOpts)
 keymap.set('n', '<leader>md', ':delmarks ', loudOpts)
 keymap.set('n', '<leader>ml', ':marks<CR>', loudOpts)
@@ -66,6 +67,13 @@ keymap.set('n', '<leader>rl', '<C-w><', silentOpts)
 keymap.set('n', '<leader>rh', '<C-w>>', silentOpts)
 keymap.set('n', '<leader>rk', '<C-w>+', silentOpts)
 keymap.set('n', '<leader>rj', '<C-w>-', silentOpts)
+
+-- Move window
+keymap.set('n', '<leader>x', '<C-w>x', silentOpts)
+keymap.set('n', '<leader>rL', '<C-w>L', silentOpts)
+keymap.set('n', '<leader>rH', '<C-w>H', silentOpts)
+keymap.set('n', '<leader>rK', '<C-w>K', silentOpts)
+keymap.set('n', '<leader>rJ', '<C-w>J', silentOpts)
 
 -- Move to window
 keymap.set('n', '<leader><Space>', '<C-w>w', silentOpts)

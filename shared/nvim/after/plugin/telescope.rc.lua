@@ -47,6 +47,22 @@ end)
 vim.keymap.set('n', '<leader>rd', function()
   builtin.diagnostics()
 end)
+-- Grep marks
+vim.keymap.set('n', '<leader>rm', function()
+  builtin.marks()
+end)
+-- Grep git_commits
+vim.keymap.set('n', '<leader>rc', function()
+  builtin.git_commits()
+end)
+-- Grep git_branches
+vim.keymap.set('n', '<leader>rb', function()
+  builtin.git_branches()
+end)
+-- Grep current_buffer
+vim.keymap.set('n', '<leader>/', function()
+  builtin.current_buffer_fuzzy_find()
+end)
 -- vim.keymap.set('n', '<leader>gb', function()
 --   builtin.buffers()
 -- end)
