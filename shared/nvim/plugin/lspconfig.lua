@@ -5,17 +5,6 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
-  -- Mappings.
-  local opts = { noremap = true, silent = true }
-
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-end
-
 protocol.CompletionItemKind = {
   '', -- Text
   '', -- Method
@@ -48,31 +37,24 @@ protocol.CompletionItemKind = {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 nvim_lsp.tailwindcss.setup {
-  on_attach = on_attach,
   capabilities = capabilities
 }
 
 nvim_lsp.cssls.setup {
-  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.eslint.setup {
   capabilities = capabilities
 }
 
 nvim_lsp.jedi_language_server.setup {
-  on_attach = on_attach,
   filetypes = { "python" },
   cmd = { "jedi_language_server" },
   capabilities = capabilities
 }
 
--- nvim_lsp.quick_lint_js.setup {
---   on_attach = on_attach,
---   filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
---   cmd = { "typescript-language-server", "--stdio" },
---   capabilities = capabilities
--- }
-
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
@@ -80,9 +62,6 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-  end,
   settings = {
     Lua = {
       diagnostics = {
@@ -118,12 +97,12 @@ vim.lsp.handlers['textdocument/signaturehelp'] = vim.lsp.with(
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  border = 'rounded',
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 2, prefix = "●" },
-  severity_sort = true,
-}
+    border = 'rounded',
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 2, prefix = "●" },
+    severity_sort = true,
+  }
 )
 
 -- Diagnostic symbols in the sign column (gutter)

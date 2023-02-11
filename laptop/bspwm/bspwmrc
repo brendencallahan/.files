@@ -121,6 +121,8 @@ for i in ${floating[@]}; do
 
 bspc rule -a Conky state=floating manage=off
 bspc rule -a stalonetray state=floating manage=off
+bspc rule -a deno state=tiled
+bspc rule -a Deno state=tiled
 
 ## Autostart -------------------------------------------------#
 

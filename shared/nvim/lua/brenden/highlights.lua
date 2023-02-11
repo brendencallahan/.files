@@ -4,7 +4,7 @@ vim.opt.wildoptions = 'pum'
 vim.opt.pumblend = 0
 vim.opt.background = 'dark'
 
--- highlight yanked text for 200ms using the "Visual" highlight group
+-- highlight yanked text for 250ms using the "Visual" highlight group
 vim.cmd [[
   augroup highlight_yank
   autocmd!

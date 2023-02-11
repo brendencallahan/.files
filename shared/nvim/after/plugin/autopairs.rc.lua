@@ -3,4 +3,3 @@ if (not status) then return end
 
 autopairs.setup({
 })
-

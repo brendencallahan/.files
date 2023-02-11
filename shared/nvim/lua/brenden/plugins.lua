@@ -68,6 +68,12 @@ packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
+  -- Markdown previewer
+  use {
+    'toppair/peek.nvim',
+    run = 'deno task --quiet build:fast'
+  }
+
   -- Alternative to cmp-nvim-lsp-signature-help
   --use 'ray-x/lsp_signature.nvim'
 

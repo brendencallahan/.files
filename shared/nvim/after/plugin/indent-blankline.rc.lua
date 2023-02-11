@@ -1,4 +1,4 @@
-vim.opt.list = true
+-- vim.opt.list = true
 
 require("indent_blankline").setup {
   use_treesitter = true,
