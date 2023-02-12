@@ -30,6 +30,9 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- Statusline on bottom
   use 'nvim-telescope/telescope.nvim' -- Popup menu for ripgrepping
 
+  -- Debugger
+  use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+
   -- Language server
   use 'williamboman/mason.nvim' -- Automagically setup lsp servers
   use 'williamboman/mason-lspconfig.nvim' -- help automagic work
