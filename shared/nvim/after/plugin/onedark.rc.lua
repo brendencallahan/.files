@@ -26,7 +26,6 @@ require('onedark').setup {
 }
 require('onedark').load()
 
-
 -- vim.cmd[[hi def IlluminatedWordText gui=NONE guibg=#171821]]
 -- vim.cmd[[hi def IlluminatedWordRead gui=NONE guibg=#171821]]
 -- vim.cmd[[hi def IlluminatedWordWrite gui=NONE guibg=#171821]]

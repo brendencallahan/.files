@@ -8,13 +8,12 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   -- use 'folke/zen-mode.nvim'
-  use 'wbthomason/packer.nvim' --Package manager
+  use 'wbthomason/packer.nvim' -- Package manager
   use 'akinsho/toggleterm.nvim'
 
   -- Colors/Menus
   use 'navarasu/onedark.nvim' -- Colorscheme
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  -- use 'rrethy/vim-illuminate' -- Highlight occurences under word
   use 'norcalli/nvim-colorizer.lua' -- Preview colors (like hex code as background)
   use {
     'nvim-tree/nvim-tree.lua', -- File explorer
@@ -23,6 +22,7 @@ packer.startup(function(use)
     }
   }
   use 'lukas-reineke/indent-blankline.nvim' -- Highlights vertical bars indicating scope
+  -- use 'echasnovski/mini.nvim' -- Underline occurences of word
 
   -- Status lines/Live grep
   use 'akinsho/bufferline.nvim' -- Menu for buffer navigation
@@ -48,10 +48,9 @@ packer.startup(function(use)
   -- Convenient 'dumb' autocomplete
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use { 'numToStr/Comment.nvim',
-    requires = {
-      'JoosepAlviste/nvim-ts-context-commentstring'
-    }
+  use {
+    'numToStr/Comment.nvim',
+    requires = {'JoosepAlviste/nvim-ts-context-commentstring'}
   }
   use 'lewis6991/gitsigns.nvim'
 
@@ -65,17 +64,16 @@ packer.startup(function(use)
   -- Better syntax highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    run = function()
+      require('nvim-treesitter.install').update({with_sync = true})
+    end
   }
 
   -- Markdown previewer
-  use {
-    'toppair/peek.nvim',
-    run = 'deno task --quiet build:fast'
-  }
+  use {'toppair/peek.nvim', run = 'deno task --quiet build:fast'}
 
   -- Alternative to cmp-nvim-lsp-signature-help
-  --use 'ray-x/lsp_signature.nvim'
+  -- use 'ray-x/lsp_signature.nvim'
 
   -- (free) Alternative to copilot
   -- Be sure to run :Codeium Auth

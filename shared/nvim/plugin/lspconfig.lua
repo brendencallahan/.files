@@ -44,10 +44,6 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.eslint.setup {
-  capabilities = capabilities
-}
-
 nvim_lsp.rust_analyzer.setup {
   filetypes = { "rust" },
   cmd = { "rustup", "run", "stable", "rust-analyzer" },
@@ -66,10 +62,13 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   capabilities = capabilities,
   settings = {
     Lua = {
+      format = {
+        enable = false
+      },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
         globals = { 'vim' },
