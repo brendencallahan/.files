@@ -48,6 +48,12 @@ nvim_lsp.eslint.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.rust_analyzer.setup {
+  filetypes = { "rust" },
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
+  capabilities = capabilities
+}
+
 nvim_lsp.jedi_language_server.setup {
   filetypes = { "python" },
   cmd = { "jedi_language_server" },
