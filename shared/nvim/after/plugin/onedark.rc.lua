@@ -1,10 +1,21 @@
--- Lua
+--[[ -- Lua
 require('onedark').setup {
   style = 'dark',
+  toggle_style_key = "<leader>ts",
+  toggle_style_list = {
+    'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+  },
   transparent = 'true',
-
   lualine = {
     transparent = 'true'
+  },
+  diagnostics = {
+    background = false,
+  },
+  code_style = {
+    comments = 'none',
+    functions = 'none',
+    keywords = 'italic',
   },
   highlights = {
     Visual = { bg = '#171821', fmt = 'bold' }, --bg = '#fbf1c7' #5a626f
@@ -21,14 +32,10 @@ require('onedark').setup {
     DiagnosticVirtualTextError = { bg = "NONE" },
     DiagnosticVirtualTextWarn = { bg = "NONE" },
     DiagnosticVirtualTextInfo = { bg = "NONE" },
-    DiagnosticVirtualTextHint = { bg = "NONE" },
+    DiagnosticVirtualTextHint = { bg = "NONE" }, 
   },
 }
-require('onedark').load()
-
--- vim.cmd[[hi def IlluminatedWordText gui=NONE guibg=#171821]]
--- vim.cmd[[hi def IlluminatedWordRead gui=NONE guibg=#171821]]
--- vim.cmd[[hi def IlluminatedWordWrite gui=NONE guibg=#171821]]
+require('onedark').load() ]]
 
 -- Floating windows prettier :)
 -- vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "NONE", fg = "NONE"})

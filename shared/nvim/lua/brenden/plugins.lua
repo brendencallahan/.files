@@ -13,6 +13,8 @@ packer.startup(function(use)
 
   -- Colors/Menus
   use 'navarasu/onedark.nvim' -- Colorscheme
+  use 'folke/tokyonight.nvim'
+  use 'wbthomason/packer.nvim' -- Package manager
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'norcalli/nvim-colorizer.lua' -- Preview colors (like hex code as background)
   use {
