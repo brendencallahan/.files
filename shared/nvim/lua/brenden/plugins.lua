@@ -9,6 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- use 'folke/zen-mode.nvim'
   use 'wbthomason/packer.nvim' -- Package manager
+  use 'tpope/vim-surround'
   use 'akinsho/toggleterm.nvim'
 
   -- Colors/Menus
@@ -32,6 +33,7 @@ packer.startup(function(use)
 
   -- Debugger
   use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+  use 'jay-babu/mason-nvim-dap.nvim'
 
   -- Language server
   use 'williamboman/mason.nvim' -- Automagically setup lsp servers

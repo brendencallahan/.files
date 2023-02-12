@@ -3,22 +3,6 @@ local dap = require('dap')
 
 dapui.setup()
 
-dap.adapters.python = {
-  type = 'executable',
-  command = '/home/kent/.virtualenvs/debugpy/bin/python',
-  args = { '-m', 'debugpy.adapter' }
-}
-
-dap.configurations.python = {
-  {
-    type = 'python',
-    request = 'launch',
-    name = "Launch file",
-    program = "${file}",
-    pythonPath = function() return '/usr/bin/python' end
-  }
-}
-
 vim.keymap.set('n', '<leader>do', function() dapui.open() end)
 
 vim.keymap.set('n', '<leader>dq', function() dapui.close() end)

@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/kent/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
+  ["mason-nvim-dap.nvim"] = {
+    loaded = true,
+    path = "/home/kent/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
+    url = "https://github.com/jay-babu/mason-nvim-dap.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/kent/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -248,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kent/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/kent/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
