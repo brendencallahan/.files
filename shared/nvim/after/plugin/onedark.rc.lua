@@ -32,11 +32,10 @@ require('onedark').setup {
     DiagnosticVirtualTextError = { bg = "NONE" },
     DiagnosticVirtualTextWarn = { bg = "NONE" },
     DiagnosticVirtualTextInfo = { bg = "NONE" },
-    DiagnosticVirtualTextHint = { bg = "NONE" }, 
+    DiagnosticVirtualTextHint = { bg = "NONE" },
   },
 }
 require('onedark').load() ]]
-
 -- Floating windows prettier :)
 -- vim.api.nvim_set_hl(0, "PmenuSel", {  bg = "NONE", fg = "NONE"})
 -- vim.api.nvim_set_hl(0, "PmenuThumb", {  bg = "NONE", fg = "NONE"})

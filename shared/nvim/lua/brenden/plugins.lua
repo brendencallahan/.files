@@ -32,7 +32,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim' -- Popup menu for ripgrepping
 
   -- Debugger
-  use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use 'jay-babu/mason-nvim-dap.nvim'
 
   -- Language server
@@ -56,7 +56,7 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use {
     'numToStr/Comment.nvim',
-    requires = {'JoosepAlviste/nvim-ts-context-commentstring'}
+    requires = { 'JoosepAlviste/nvim-ts-context-commentstring' }
   }
   use 'lewis6991/gitsigns.nvim'
 
@@ -71,12 +71,12 @@ packer.startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
-      require('nvim-treesitter.install').update({with_sync = true})
+      require('nvim-treesitter.install').update({ with_sync = true })
     end
   }
 
   -- Markdown previewer
-  use {'toppair/peek.nvim', run = 'deno task --quiet build:fast'}
+  use { 'toppair/peek.nvim', run = 'deno task --quiet build:fast' }
 
   -- Alternative to cmp-nvim-lsp-signature-help
   -- use 'ray-x/lsp_signature.nvim'

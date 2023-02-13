@@ -19,9 +19,9 @@ comment.setup {
       end
 
       return require('ts_context_commentstring.internal').calculate_commentstring({
-        key = type,
-        location = location,
-      })
+          key = type,
+          location = location,
+        })
     end
   end,
 }

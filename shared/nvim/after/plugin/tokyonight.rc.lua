@@ -8,8 +8,8 @@ require("tokyonight").setup({
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = {italic = true},
-    keywords = {italic = false},
+    comments = { italic = true },
+    keywords = { italic = false },
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
@@ -26,28 +26,27 @@ require("tokyonight").setup({
   --- function will be called with a ColorScheme table
   ---@param colors ColorScheme
   on_colors = function(colors) colors.bg = '#2d2c35' end,
-
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
   ---@param highlights Highlights
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors)
-    highlights.IndentBlanklineContextStart = {sp = nil}
-    highlights.Visual = {bg = '#171821'}
-    highlights.CursorLine = {bg = '#171821'}
-    highlights.Terminal = {bg = colors.bg}
-    highlights.Pmenu = {bg = colors.bg}
-    highlights.PmenuSbar = {bg = colors.bg}
-    highlights.PmenuSel = {bg = colors.bg}
-    highlights.PmenuThumb = {bg = colors.bg}
-    highlights.WildMenu = {bg = colors.bg}
-    highlights.Normal = {bg = colors.bg}
-    highlights.NormalFloat = {bg = colors.bg}
-    highlights.FloatBorder = {bg = colors.bg}
-    highlights.DiagnosticVirtualTextError = {fg = colors.error, bg = colors.bg}
-    highlights.DiagnosticVirtualTextWarn = {fg = colors.warning, bg = colors.bg}
-    highlights.DiagnosticVirtualTextInfo = {fg = colors.info, bg = colors.bg}
-    highlights.DiagnosticVirtualTextHint = {fg = colors.hint, bg = colors.bg}
+    highlights.IndentBlanklineContextStart = { sp = nil }
+    highlights.Visual = { bg = '#171821' }
+    highlights.CursorLine = { bg = '#171821' }
+    highlights.Terminal = { bg = colors.bg }
+    highlights.Pmenu = { bg = colors.bg }
+    highlights.PmenuSbar = { bg = colors.bg }
+    highlights.PmenuSel = { bg = colors.bg }
+    highlights.PmenuThumb = { bg = colors.bg }
+    highlights.WildMenu = { bg = colors.bg }
+    highlights.Normal = { bg = colors.bg }
+    highlights.NormalFloat = { bg = colors.bg }
+    highlights.FloatBorder = { bg = colors.bg }
+    highlights.DiagnosticVirtualTextError = { fg = colors.error, bg = colors.bg }
+    highlights.DiagnosticVirtualTextWarn = { fg = colors.warning, bg = colors.bg }
+    highlights.DiagnosticVirtualTextInfo = { fg = colors.info, bg = colors.bg }
+    highlights.DiagnosticVirtualTextHint = { fg = colors.hint, bg = colors.bg }
   end
 })
 

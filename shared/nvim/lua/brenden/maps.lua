@@ -1,5 +1,5 @@
 local keymap = vim.keymap
-local silentOpts = {silent = true, nowait = true, noremap = true}
+local silentOpts = { silent = true, nowait = true, noremap = true }
 local loudOpts = { nowait = true, noremap = true }
 
 -- Space as leader key
