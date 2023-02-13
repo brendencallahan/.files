@@ -44,15 +44,15 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.rust_analyzer.setup {
-  filetypes = { "rust" },
-  cmd = { "rustup", "run", "stable", "rust-analyzer" },
+nvim_lsp.pylsp.setup {
+  filetypes = { "python" },
+  cmd = { "pyright-langserver", "--stdio"},
   capabilities = capabilities
 }
 
-nvim_lsp.jedi_language_server.setup {
-  filetypes = { "python" },
-  cmd = { "jedi_language_server" },
+nvim_lsp.rust_analyzer.setup {
+  filetypes = { "rust" },
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
   capabilities = capabilities
 }
 

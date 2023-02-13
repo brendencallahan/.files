@@ -44,10 +44,10 @@ require("tokyonight").setup({
     highlights.Normal = {bg = colors.bg}
     highlights.NormalFloat = {bg = colors.bg}
     highlights.FloatBorder = {bg = colors.bg}
-    highlights.DiagnosticVirtualTextError = {bg = colors.bg}
-    highlights.DiagnosticVirtualTextWarn = {bg = colors.bg}
-    highlights.DiagnosticVirtualTextInfo = {bg = colors.bg}
-    highlights.DiagnosticVirtualTextHint = {bg = colors.bg}
+    highlights.DiagnosticVirtualTextError = {fg = colors.error, bg = colors.bg}
+    highlights.DiagnosticVirtualTextWarn = {fg = colors.warning, bg = colors.bg}
+    highlights.DiagnosticVirtualTextInfo = {fg = colors.info, bg = colors.bg}
+    highlights.DiagnosticVirtualTextHint = {fg = colors.hint, bg = colors.bg}
   end
 })
 

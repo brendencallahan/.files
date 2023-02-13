@@ -112,10 +112,22 @@ cmp.setup.cmdline(':', {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['tailwindcss'].setup {
+  capabilities = capabilities
+}
+require('lspconfig')['cssls'].setup {
+  capabilities = capabilities
+}
+require('lspconfig')['pylsp'].setup {
+  capabilities = capabilities
+}
+require('lspconfig')['rust_analyzer'].setup {
+  capabilities = capabilities
+}
 require('lspconfig')['tsserver'].setup {
   capabilities = capabilities
 }
-require('lspconfig')['jedi_language_server'].setup {
+require('lspconfig')['lua_ls'].setup {
   capabilities = capabilities
 }
 
