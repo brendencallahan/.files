@@ -11,6 +11,6 @@ colorizer.setup({
     rgb_fn = true, -- CSS rgb() and rgba() functions
     hsl_fn = true, -- CSS hsl() and hsla() functions
     css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-    tailwind = true
+    tailwind = "both"
   }
 })
