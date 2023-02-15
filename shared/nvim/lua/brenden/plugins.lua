@@ -13,10 +13,11 @@ packer.startup(function(use)
   use 'akinsho/toggleterm.nvim'
 
   -- Colors/Menus
-  use 'navarasu/onedark.nvim' -- Colorscheme
+  -- use 'navarasu/onedark.nvim' -- Colorscheme
   use 'folke/tokyonight.nvim'
+  use 'mechatroner/rainbow_csv'
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'norcalli/nvim-colorizer.lua' -- Preview colors (like hex code as background)
+  use 'NvChad/nvim-colorizer.lua' -- Preview colors (like hex code as background)
   use {
     'nvim-tree/nvim-tree.lua', -- File explorer
     requires = {
