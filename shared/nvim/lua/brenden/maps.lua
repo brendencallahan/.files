@@ -24,6 +24,7 @@ keymap.set('n', '<leader>s', function()
   endif
   ]]
 end, loudOpts)
+keymap.set('n', '<leader>S', 'z=', silentOpts)
 -- Escape in insert mode
 keymap.set('i', 'df', '<esc>', silentOpts)
 
