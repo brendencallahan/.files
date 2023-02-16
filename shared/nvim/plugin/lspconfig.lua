@@ -139,13 +139,14 @@ cmp.setup.cmdline(':', {
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.tailwindcss.setup { capabilities = capabilities }
 
 nvim_lsp.jsonls.setup {
   filetypes = {"json", "jsonc"},
   cmd = { "vscode-json-language-server", "--stdio" },
-  capabilities = capabilities
+  capabilities = capabilities,
 }
 
 nvim_lsp.html.setup {
