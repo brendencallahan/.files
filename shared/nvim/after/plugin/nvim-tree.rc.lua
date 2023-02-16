@@ -40,3 +40,10 @@ vim.keymap.set('n', '<leader>fe', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>ff', ':NvimTreeFindFile<CR>')
 vim.keymap.set('n', '<leader>fl', ':NvimTreeResize -5<CR>')
 vim.keymap.set('n', '<leader>fh', ':NvimTreeResize +5<CR>')
+
+local function open_nvim_tree()
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
