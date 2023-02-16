@@ -3,7 +3,7 @@ vim.cmd("autocmd!")
 -- Treesitter folding
 vim.wo.foldmethod = 'expr'
 vim.wo.foldlevel = 20
-vim.opt.foldlevelstart = 20
+vim.opt.foldlevelstart = 50
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.scriptencoding = 'utf-8'
@@ -27,7 +27,7 @@ vim.opt.laststatus = 2
 vim.opt.scrolloff = 10
 vim.opt.shell = 'zsh'
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = 'nosplit'
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true
 vim.opt.breakindent = true

@@ -40,6 +40,8 @@ keymap.set('n', '<leader>w', ':w<CR>', silentOpts)
 keymap.set('n', '<leader>rs', ':%s/<c-r><c-w>/&/gc<left><left><left>', loudOpts)
 -- word
 keymap.set('n', '<leader>rn', ':%s/\\<<c-r><c-w>\\>/&/gc<left><left><left>', loudOpts)
+--visual selection
+keymap.set('v', 's', ':s//&/gc<left><left><left><left><left>', loudOpts)
 -- disable highlighting until next search
 keymap.set('n', '<CR>', ':noh<CR><CR>', silentOpts)
 
