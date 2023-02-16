@@ -51,6 +51,12 @@ nvim_lsp.rust_analyzer.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.prismals.setup {
+  filetypes = {"prisma"},
+  cmd = { "prisma-language-server", "--stdio" },
+  capabilities = capabilities
+}
+
 nvim_lsp.tsserver.setup {
   filetypes = {
     "javascript", "javascriptreact", "javascript.jsx", "typescript",
