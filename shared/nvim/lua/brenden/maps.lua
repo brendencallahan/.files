@@ -46,7 +46,7 @@ keymap.set('n', '<leader>!', ':q!<CR>', silentOpts)
 
 -- Marks
 keymap.set('n', '<leader>pn', '<C-I>', silentOpts)
-keymap.set('n', '<leader>pb', '<C-o>', silentOpts)
+keymap.set('n', '<leader>pp', '<C-o>', silentOpts)
 keymap.set('n', '<leader>m', '`', loudOpts)
 keymap.set('n', '<leader>mn', ':mark ', loudOpts)
 keymap.set('n', '<leader>md', ':delmarks ', loudOpts)

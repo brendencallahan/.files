@@ -19,3 +19,8 @@ mason_dap.setup_handlers()
 lspconfig.setup {
   automatic_installation = true
 }
+
+local opts = { noremap = true, silent = true }
+
+-- Format on keypress
+vim.keymap.set('n', '<leader>fs', function() vim.lsp.buf.format { async = true } end, opts)
