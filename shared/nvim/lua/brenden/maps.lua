@@ -10,6 +10,9 @@ vim.g.maplocalleader = " "
 keymap.set('n', 'x', '"_x', silentOpts)
 keymap.set('v', 'x', '"_x', silentOpts)
 
+-- Termcodes (special characters + emojis)
+vim.api.nvim_replace_termcodes('<C-U>', true, false, true)
+
 -- Escape in insert mode
 keymap.set('i', 'df', '<esc>', silentOpts)
 
