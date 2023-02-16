@@ -169,7 +169,7 @@ nvim_lsp.ltex.setup {
   cmd = { "ltex-ls"}
 }
 
-nvim_lsp.pylsp.setup {
+nvim_lsp.pyright.setup {
   filetypes = { "python" },
   cmd = { "pyright-langserver", "--stdio" },
   capabilities = capabilities
