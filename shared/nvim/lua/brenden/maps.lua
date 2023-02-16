@@ -13,6 +13,17 @@ keymap.set('v', 'x', '"_x', silentOpts)
 -- Termcodes (special characters + emojis)
 vim.api.nvim_replace_termcodes('<C-U>', true, false, true)
 
+-- Spell Check toggle
+keymap.set('n', '<leader>s', function()
+  vim.cmd [[
+  set spell!
+  if &spell
+    echo "Spellcheck ON"
+  else
+    echo "Spellcheck OFF"
+  endif
+  ]]
+end, loudOpts)
 -- Escape in insert mode
 keymap.set('i', 'df', '<esc>', silentOpts)
 
