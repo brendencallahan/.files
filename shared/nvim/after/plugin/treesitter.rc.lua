@@ -21,6 +21,7 @@ ts.setup {
     "html",
     "javascript",
     "json",
+    "latex",
     "lua",
     "markdown",
     "markdown_inline",

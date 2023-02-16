@@ -144,13 +144,13 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 nvim_lsp.tailwindcss.setup { capabilities = capabilities }
 
 nvim_lsp.jsonls.setup {
-  filetypes = {"json", "jsonc"},
+  filetypes = { "json", "jsonc" },
   cmd = { "vscode-json-language-server", "--stdio" },
   capabilities = capabilities,
 }
 
 nvim_lsp.html.setup {
-  filetypes = {"html"},
+  filetypes = { "html" },
   cmd = { "vscode-html-language-server", "--stdio" },
   capabilities = capabilities
 }
@@ -163,6 +163,11 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.ltex.setup {
+  filetypes = { "bib", "gitcommit", "org", "plaintex",
+    "rst", "rnoweb", "tex", "pandoc" },
+  cmd = { "ltex-ls"}
+}
 
 nvim_lsp.pylsp.setup {
   filetypes = { "python" },
