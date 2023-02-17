@@ -164,7 +164,7 @@ nvim_lsp.cssls.setup {
 }
 
 nvim_lsp.ltex.setup {
-  filetypes = { "bib", "gitcommit", "org", "plaintex",
+  filetypes = { "bib", "markdown", "gitcommit", "org", "plaintex",
     "rst", "rnoweb", "tex", "pandoc" },
   cmd = { "ltex-ls"}
 }
