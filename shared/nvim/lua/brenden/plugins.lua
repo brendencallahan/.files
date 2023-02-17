@@ -78,6 +78,7 @@ packer.startup(function(use)
 
   -- Markdown previewer
   use { 'toppair/peek.nvim', run = 'deno task --quiet build:fast' }
+  use 'lervag/vimtex'
 
   -- Alternative to cmp-nvim-lsp-signature-help
   -- use 'ray-x/lsp_signature.nvim'

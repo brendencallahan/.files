@@ -98,3 +98,5 @@ keymap.set('', '<leader>h', '<C-w>h', silentOpts)
 keymap.set('', '<leader>k', '<C-w>k', silentOpts)
 keymap.set('', '<leader>j', '<C-w>j', silentOpts)
 keymap.set('', '<leader>l', '<C-w>l', silentOpts)
+
+vim.cmd[[let g:vimtext_view_method = 'atril']]
