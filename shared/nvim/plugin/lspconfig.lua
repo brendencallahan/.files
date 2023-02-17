@@ -163,10 +163,10 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.ltex.setup {
-  filetypes = { "bib", "markdown", "gitcommit", "org", "plaintex",
-    "rst", "rnoweb", "tex", "pandoc" },
-  cmd = { "ltex-ls"}
+nvim_lsp.texlab.setup {
+  filetypes = {"tex", "plaintex", "bib"},
+  cmd = { "texlab" },
+  capabilities = capabilities
 }
 
 nvim_lsp.pyright.setup {
