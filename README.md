@@ -1,6 +1,6 @@
 # My Configs
 
-![image](https://user-images.githubusercontent.com/47364240/218373552-e2cebda1-0e8f-4a4b-82a0-8aaa9fca4d2d.png)
+![image](https://user-images.githubusercontent.com/47364240/219877011-74160be8-e661-44b8-93e4-ea7a404c4012.png)
 
 There are three directories: laptop, desktop, and shared.
 Hopefully the names make sense :p
