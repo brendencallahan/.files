@@ -30,7 +30,7 @@ dark_value='0.30'
 
 # Wallpaper
 wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-wallpaper="/usr/share/backgrounds/tower.jpg"
+wallpaper="/usr/share/backgrounds/blue_firewatch.jpeg"
 
 # Polybar
 polybar_font='JetBrainsMono Nerd Font:size=10;3'
