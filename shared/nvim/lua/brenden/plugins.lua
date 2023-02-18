@@ -1,10 +1,9 @@
 local status, packer = pcall(require, "packer")
+
 if (not status) then
   print("Packer is not installed")
   return
 end
-
-vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   -- use 'folke/zen-mode.nvim'
@@ -93,4 +92,17 @@ packer.startup(function(use)
   -- vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
   -- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
   -- end }
+  if Packer_bootstrap then
+    packer.sync()
+  end
 end)
+
+vim.api.nvim_exec(
+  [[
+  augroup packer_ide_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]],
+  false
+)
