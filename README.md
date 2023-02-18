@@ -31,20 +31,6 @@ cp -r shared/nvim ~/.config/nvim
 ```
 (you can also just clone the nvim folder)
 
-
-Next, install packer with
-
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-Then once packer is installed open the plugins.lua file with
-
-```bash
-nvim ~/.config/nvim/lua/brenden/plugins.lua
-```
-
 (You will get errors about missing plugins. Just press enter to ignore them, as we will install them next)
 
 Switch to `COMMAND` mode and type the following command
