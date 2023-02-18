@@ -168,6 +168,8 @@ alias ohmyzsh="thunar ~/.oh-my-zsh"
 
 # dir navigation
 alias projects='cd /home/kent/HDD/Projects/'
+alias books='cd /home/kent/Books/Books/'
+alias mbooks='cd /home/kent/Books/MathBooks/'
 
 # ls
 alias l='ls -lh'
