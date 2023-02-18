@@ -1,4 +1,6 @@
 set recolor   
+set adjust-open "width"
 set recolor-lightcolor \#2d2c35
 set recolor-keephue
 set default-bg \#2d2c35
+set statusbar-bg \#2d2c35
