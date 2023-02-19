@@ -12,4 +12,10 @@ null_ls.setup {
     }),
     null_ls.builtins.diagnostics.zsh
   },
+  ensure_installed = {
+    "prettierd",
+    "black",
+    "gitsigns",
+    "eslint_d",
+  },
 }
