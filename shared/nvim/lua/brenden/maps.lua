@@ -26,7 +26,7 @@ keymap.set('n', '<leader>s', function()
 end, loudOpts)
 keymap.set('n', '<leader>S', 'z=', silentOpts)
 -- Escape in insert mode
-keymap.set('i', 'df', '<esc>', silentOpts)
+keymap.set('i', 'jk', '<esc>', silentOpts)
 
 -- Registers
 --yank selection to clipboard

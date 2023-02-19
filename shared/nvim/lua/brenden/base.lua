@@ -2,9 +2,9 @@ vim.cmd("autocmd!")
 
 -- Treesitter folding
 vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.wo.foldlevel = 20
 vim.opt.foldlevelstart = 50
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
