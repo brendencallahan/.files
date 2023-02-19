@@ -18,7 +18,7 @@ Delete that at the bottom of desktop/bspwm/.bspwmrc if you want to use it.
 Requirements
 ```bash
 sudo pacman -S neovim ripgrep cmake luarocks tsc nodejs yarn tsc gdb lldb python-pip
-tex-live texlive-most zathura zathura-pdf-mupdf
+tex-live texlive-most texlive-latexindent-meta(AUR) zathura zathura-pdf-mupdf
 ```
 (for Python debugging, be sure to use a virtualenv)
 ```bash
