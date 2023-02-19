@@ -7,15 +7,19 @@ null_ls.setup {
     null_ls.builtins.formatting.black,
     null_ls.builtins.code_actions.gitsigns,
     null_ls.builtins.code_actions.eslint_d,
+    null_ls.builtins.code_actions.markdownlint,
+    null_ls.builtins.diagnostics.markdownlint,
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
     null_ls.builtins.diagnostics.zsh
   },
   ensure_installed = {
+    "eslint_d",
     "prettierd",
+    "markdownlint",
+    "eslint_d",
     "black",
     "gitsigns",
-    "eslint_d",
   },
 }
