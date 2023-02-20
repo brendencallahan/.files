@@ -125,6 +125,19 @@ nvim_lsp.lua_ls.setup {
 }
 
 -- Make it look pretty :)
+
+vim.lsp.handlers['textdocument/codeLens'] =
+  vim.lsp.with(vim.lsp.codelens.on_codelens, {
+    border = 'rounded',
+    virtual_text = { spacing = 2, prefix = "●" }
+  })
+
+vim.lsp.handlers['textdocument/codeAction'] =
+  vim.lsp.with(vim.lsp.handlers.code_action, {
+    border = 'rounded',
+    virtual_text = { spacing = 2, prefix = "●" }
+  })
+
 vim.lsp.handlers['textdocument/hover'] =
   vim.lsp.with(vim.lsp.handlers.hover, {
     border = 'rounded',
@@ -141,7 +154,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     border = 'rounded',
     underline = true,
-    update_in_insert = false,
+    update_in_insert = true,
     virtual_text = { spacing = 2, prefix = "●" },
     severity_sort = true
   })
@@ -155,7 +168,7 @@ end
 
 vim.diagnostic.config({
   virtual_text = { prefix = '●' },
-  update_in_insert = true,
+  update_in_insert = false,
   float = {
     source = "always" -- Or "if_many"
   }
