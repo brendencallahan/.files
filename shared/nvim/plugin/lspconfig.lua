@@ -154,7 +154,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     border = 'rounded',
     underline = true,
-    update_in_insert = true,
+    update_in_insert = false,
     virtual_text = { spacing = 2, prefix = "●" },
     severity_sort = true
   })
@@ -173,7 +173,6 @@ vim.diagnostic.config({
     source = "always" -- Or "if_many"
   }
 })
-
 
 local function formatForTailwindCSS(entry, vim_item)
   if vim_item.kind == 'Color' and entry.completion_item.documentation then
