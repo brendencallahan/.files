@@ -3,8 +3,8 @@ if (not status) then return end
 
 saga.setup({
   scroll_preview = {
-    scroll_down = "<C-f>",
-    scroll_up = "<C-b>"
+    scroll_down = "<C-b>",
+    scroll_up = "<C-f>"
   },
   request_timeout = 2000,
   finder = {
@@ -32,6 +32,8 @@ saga.setup({
   },
   -- Diagnostic
   diagnostic = {
+    on_insert = false,
+    on_insert_follow = true,
     twice_into = false,
     show_code_action = true,
     show_source = true,
@@ -50,10 +52,10 @@ saga.setup({
   },
   lightbulb = {
     enable = true,
-    enable_in_insert = true,
+    enable_in_insert = false,
     sign = true,
     sign_priority = 40,
-    virtual_text = false
+    virtual_text = false,
   },
   -- Outline
   outline = {
@@ -87,10 +89,10 @@ saga.setup({
   ui = {
     winblend = 0,
     border = 'rounded',
-    colors = {
-      normal_bg = '#2d2c35',
-      title_bg = '#2d2c35'
-    }
+    -- colors = {
+    --   normal_bg = '#2d2c35',
+    --   title_bg = '#2d2c35'
+    -- }
   },
 })
 
