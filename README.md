@@ -20,6 +20,12 @@ Requirements
 sudo pacman -S neovim ripgrep cmake luarocks tsc nodejs yarn tsc gdb lldb python-pip
 tex-live texlive-most biber texlive-latexindent-meta(AUR) zathura zathura-pdf-mupdf
 ```
+
+(for easy creation of LaTeX figures in inkscape: https://castel.dev/post/lecture-notes-2/)
+```bash
+pip3 install inkscape-figures
+```
+
 (for Python debugging, be sure to use a virtualenv)
 ```bash
 python3 -m venv example
