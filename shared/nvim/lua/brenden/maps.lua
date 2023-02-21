@@ -75,6 +75,9 @@ keymap.set('n', '<leader>tq', ':tabclose<CR>', silentOpts)
 keymap.set('n', '<leader>th', 'gT', silentOpts)
 keymap.set('n', '<leader>tl', 'gt', silentOpts)
 
+-- Send tab to new split
+keymap.set('n', '<leader>ts', ':tabedit %<CR>', silentOpts)
+
 -- Split window
 keymap.set('n', '<leader>sh', ':split<Return><C-w>w', silentOpts)
 keymap.set('n', '<leader>sv', ':vsplit<Return><C-w>w', silentOpts)
