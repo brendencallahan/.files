@@ -25,7 +25,7 @@ saga.setup({
   },
   code_action = {
     num_shortcut = true,
-    extend_gitsigns = true,
+    extend_gitsigns = false,
     key = {
       quit = { "q", "<Esc>" },
       exec = { "e", "<CR>" }

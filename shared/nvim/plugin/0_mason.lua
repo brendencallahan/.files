@@ -4,7 +4,27 @@ if (not status) then return end
 local status2, mason_lspconfig = pcall(require, "mason-lspconfig")
 if (not status2) then return end
 
-mason.setup()
+mason.setup({
+  -- ensure_installed = {
+  --   "gitsigns",
+  --   "black",
+  --   "cpptools",
+  --   "css-lsp",
+  --   "debugpy",
+  --   "eslint_d",
+  --   "html-lsp",
+  --   "json-lsp",
+  --   "lua-language-server",
+  --   "markdownlint",
+  --   "prettierd",
+  --   "prisma-language-server",
+  --   "pyright",
+  --   "rust-analyzer",
+  --   "tailwindcss-language-server",
+  --   "texlab",
+  --   "typescript-language-server",
+  -- }
+})
 
 mason_dap.setup({
   ensure_installed = {
