@@ -35,9 +35,13 @@ packer.startup(function(use)
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use 'jay-babu/mason-nvim-dap.nvim'
 
+  -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'jose-elias-alvarez/null-ls.nvim'
+
   -- Language server
   use 'williamboman/mason.nvim' -- Automagically setup lsp servers
   use 'williamboman/mason-lspconfig.nvim' -- help automagic work
+  use 'jay-babu/mason-null-ls.nvim'
   use 'nvim-lua/plenary.nvim' -- helper lua functions for plugins
   use 'onsails/lspkind.nvim' -- VSCode like icons for lsp
   use 'glepnir/lspsaga.nvim' -- LSP UIs
@@ -64,9 +68,6 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
 
-  -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'jose-elias-alvarez/null-ls.nvim'
-  --
   -- Better syntax highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
