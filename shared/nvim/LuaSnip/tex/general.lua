@@ -29,16 +29,21 @@ ls.add_snippets("tex", {
     }
   ),
   -- Examples of complete snippets using fmt and fmta
-
+  s({ trig = ";in", dscr = "Inline math mode", snippetType = "autosnippet" },
+    fmta(
+      "$<>$",
+      { i(1) }
+    )
+  ),
   -- \texttt
-  s({ trig = "tt", dscr = "Expands 'tt' into '\texttt{}'" },
+  s({ trig = ";tt", dscr = "Normal text in math mode", snippetType = "autosnippet" },
     fmta(
       "\\texttt{<>}",
       { i(1) }
     )
   ),
   -- \frac
-  s({ trig = "ff", dscr = "Expands 'ff' into '\frac{}{}'" },
+  s({ trig = ";ff", dscr = "Fraction", snippetType = "autosnippet" },
     fmt(
       "\\frac{<>}{<>}",
       {
@@ -49,7 +54,7 @@ ls.add_snippets("tex", {
     )
   ),
   -- Equation
-  s({ trig = "eq", dscr = "Expands 'eq' into an equation environment" },
+  s({ trig = ";el", dscr = "Multiline math mode with label", snippetType = "autosnippet" },
     fmta(
       [[
        \begin{equation}
@@ -58,5 +63,15 @@ ls.add_snippets("tex", {
      ]],
       { i(1) }
     )
-  )
+  ),
+  s({ trig = ";enl", dscr = "Multiline math mode with no label", snippetType = "autosnippet" },
+    fmta(
+      [[
+      \[
+           <>
+      \]
+     ]],
+      { i(1) }
+    )
+  ),
 })
