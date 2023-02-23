@@ -13,8 +13,10 @@ if [[ -z "$status" ]]; then
 	prompt='Offline'
 	mesg="MPD is Offline"
 else
-	prompt="`mpc -f "%artist%" current`"
-	mesg="`mpc -f "%title%" current` :: `mpc status | grep "#" | awk '{print $3}'`"
+  prompt="`playerctl metadata artist`"
+  mesg="`playerctl metadata title` :: `playerctl position --format "{{duration(position)}}"` / `playerctl metadata --format "{{duration(mpris:length)}}"`"
+	# prompt="`mpc -f "%artist%" current`"
+	# mesg="`mpc -f "%title%" current` :: `mpc status | grep "#" | awk '{print $3}'`"
 fi
 
 # Options
@@ -81,17 +83,17 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		mpc -q toggle && kunst --size 60x60 --silent
+		playerctl play
 	elif [[ "$1" == '--opt2' ]]; then
-		mpc -q stop
+		playerctl stop
 	elif [[ "$1" == '--opt3' ]]; then
-		mpc -q prev && kunst --size 60x60 --silent
+    playerctl previous
 	elif [[ "$1" == '--opt4' ]]; then
-		mpc -q next && kunst --size 60x60 --silent
+		playerctl next
 	elif [[ "$1" == '--opt5' ]]; then
-		mpc -q repeat
+		playerctl loop playlist 
 	elif [[ "$1" == '--opt6' ]]; then
-		mpc -q random
+		playerctl toggle
 	fi
 }
 

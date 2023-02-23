@@ -42,7 +42,7 @@ super + shift + {f,w,e}
 
 # Terminal Apps
 ctrl + alt + {v,r,h}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,ranger,htop}
+	kitty {nvim,ranger,htop}
 
 # Color Picker
 super + p
@@ -92,7 +92,7 @@ XF86Audio{Mute,MicMute}
 	
 # Music control
 XF86Audio{Next,Prev,Play,Stop}
-	mpc {next,prev,toggle,stop}
+	playerctl {next,previous,play-pause,stop}
 
 ##---------- Bspwm ----------##
 
