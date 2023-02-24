@@ -157,6 +157,8 @@ bash ~/.fehbg
 
 # Set refresh rate
 xrandr --output DisplayPort-1 --mode 1920x1080 --rate 165.00
+# Set color saturation
+vibrant-cli DisplayPort-1 1.125
 
 # Start mpd
 exec mpd &
@@ -166,4 +168,3 @@ bspbar
 bspcomp
 bspdunst
 bspfloat &
-
