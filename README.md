@@ -83,6 +83,9 @@ BSPWM is just copy/paste if you want my setup.
 
 Recommended apps. Hopefully they're all in your package manager :)
 ```bash
-neovim kitty zsh lazygit lazydocker docker lolcat espeak-ng playerctl
+sudo pacman -S neovim kitty zsh lazygit lazydocker docker lolcat espeak-ng playerctl
 firefox steam ttf-liberation postman corectrl discord spotify moonlight
+```
+```
+yay -S vibrant
 ```
