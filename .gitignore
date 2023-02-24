@@ -1,2 +1,4 @@
 shared/lazygit/state.yml
 shared/nvim/indent.log
+__pycache__/
+*.py[cod]
