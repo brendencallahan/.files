@@ -195,5 +195,8 @@ alias zf='zathura --fork'
 # latex
 alias iw='inkscape-figures watch --daemon'
 
+# mouse
+alias mouse_slow='xinput --set-prop 24 "libinput Accel Speed" -0.75'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
