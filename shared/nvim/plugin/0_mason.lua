@@ -57,10 +57,10 @@ mason_lspconfig.setup {
     "pyright",
     "rust_analyzer",
     "prismals",
-    "tsserver",
+    -- "tsserver",
     "lua_ls",
   },
-  automatic_installation = true
+  automatic_installation = { exclude = { "tsserver" } }
 }
 
 local opts = { noremap = true, silent = true }
