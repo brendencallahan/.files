@@ -42,6 +42,14 @@ local ls = require 'luasnip'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+nvim_lsp.eslint.setup {
+  capabilities = capabilities,
+  on_attach = function(client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end
+}
+
 nvim_lsp.tailwindcss.setup { capabilities = capabilities }
 
 nvim_lsp.jsonls.setup {
