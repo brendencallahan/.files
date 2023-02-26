@@ -3,6 +3,7 @@ vim.wo.foldtext = 'vimtex#fold#text()'
 
 vim.cmd[[inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>]]
 vim.cmd[[nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>]]
+vim.cmd[[set conceallevel=1]]
 
 -- vim.cmd[[
 -- nmap <leader>ll :w<cr> :!pdflatex %:r.tex && bibtex %:r.aux && pdflatex %:r.tex && pdflatex %:r.tex && rm %:r.aux %:r.log %:r.blg %:r.bbl<cr>
