@@ -223,7 +223,7 @@ cmp.setup({
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif ls.expand_or_jumpable() then
+      elseif ls.expand_or_locally_jumpable() then
         ls.expand_or_jump()
       else
         fallback()
