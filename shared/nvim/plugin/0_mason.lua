@@ -59,6 +59,7 @@ mason_lspconfig.setup {
     "prismals",
     -- "tsserver",
     "lua_ls",
+    "bashls",
   },
   automatic_installation = { exclude = { "tsserver" } }
 }

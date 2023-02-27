@@ -50,6 +50,8 @@ nvim_lsp.eslint.setup {
   end
 }
 
+nvim_lsp.bashls.setup { capabilities = capabilities }
+
 nvim_lsp.tailwindcss.setup { capabilities = capabilities }
 
 nvim_lsp.jsonls.setup {
