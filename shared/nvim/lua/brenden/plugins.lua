@@ -13,8 +13,9 @@ packer.startup(function(use)
 
   -- Colors/Menus
   -- use 'navarasu/onedark.nvim' -- Colorscheme
+  -- use 'EdenEast/nightfox.nvim'
+  use 'ellisonleao/gruvbox.nvim'
   use 'folke/tokyonight.nvim'
-  use 'EdenEast/nightfox.nvim'
   use 'mechatroner/rainbow_csv'
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'NvChad/nvim-colorizer.lua' -- Preview colors (like hex code as background)
@@ -99,12 +100,12 @@ packer.startup(function(use)
   end
 end)
 
-vim.api.nvim_exec(
-  [[
-  augroup packer_ide_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]],
-  false
-)
+-- vim.api.nvim_exec(
+--   [[
+--   augroup packer_ide_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]],
+--   false
+-- )
