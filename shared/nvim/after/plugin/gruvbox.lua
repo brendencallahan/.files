@@ -10,18 +10,18 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = false,
   invert_intend_guides = false,
-  inverse = false, -- invert background for search, diffs, statuslines and errors
+  inverse = true, -- invert background for search, diffs, statuslines and errors
   contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {
-    bg = '#2d2c35'
+    bg = '#2d2c35',
   },
   overrides = {
     IndentBlanklineContextStart = { sp = '#c79194' },
     IndentBlanklineContextChar = { fg = '#c79194' },
     IndentBlanklineChar = { fg = 'NONE' },
-    Visual = { bg = '#171821' },
+    Visual = { bg = '#171821', bold = true },
     CursorLine = { bg = '#171821' },
-    CursorLineNR = { fg = '#c79194', bg = 'NONE', bold = true},
+    CursorLineNR = { fg = '#c79194', bg = 'NONE', bold = true },
     SignColumn = { bg = '#2d2c35' },
     Terminal = { bg = '#2d2c35' },
     Pmenu = { bg = '#2d2c35' },
@@ -36,6 +36,9 @@ require("gruvbox").setup({
     DiagnosticVirtualTextWarn = { bg = '#2d2c35' },
     DiagnosticVirtualTextInfo = { bg = '#2d2c35' },
     DiagnosticVirtualTextHint = { bg = '#2d2c35' },
+    Delimiter = { fg = '#45878a' },
+    MatchParen = { fg = '#45878a', bg = '#171821'},
+    Comment = { italic = true },
   },
   dim_inactive = false,
   transparent_mode = true,
