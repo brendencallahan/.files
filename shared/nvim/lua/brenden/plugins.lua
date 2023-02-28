@@ -14,6 +14,7 @@ packer.startup(function(use)
   -- Colors/Menus
   -- use 'navarasu/onedark.nvim' -- Colorscheme
   use 'folke/tokyonight.nvim'
+  use 'EdenEast/nightfox.nvim'
   use 'mechatroner/rainbow_csv'
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'NvChad/nvim-colorizer.lua' -- Preview colors (like hex code as background)
