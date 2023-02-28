@@ -10,7 +10,7 @@ require("gruvbox").setup({
   invert_signs = false,
   invert_tabline = false,
   invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
+  inverse = false, -- invert background for search, diffs, statuslines and errors
   contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {
     bg = '#2d2c35',
@@ -21,7 +21,7 @@ require("gruvbox").setup({
     IndentBlanklineChar = { fg = 'NONE' },
     Visual = { bg = '#171821', bold = true },
     CursorLine = { bg = '#171821' },
-    CursorLineNR = { fg = '#c79194', bg = 'NONE', bold = true },
+    CursorLineNr = { fg = '#c79194', bg = 'NONE', bold = true },
     SignColumn = { bg = '#2d2c35' },
     Terminal = { bg = '#2d2c35' },
     Pmenu = { bg = '#2d2c35' },
