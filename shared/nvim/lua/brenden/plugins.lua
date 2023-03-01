@@ -12,6 +12,7 @@ packer.startup(function(use)
   use 'akinsho/toggleterm.nvim'
 
   -- Colors/Menus
+  use 'rebelot/kanagawa.nvim'
   use 'ellisonleao/gruvbox.nvim'
   use 'folke/tokyonight.nvim'
   use 'mechatroner/rainbow_csv'

@@ -16,7 +16,7 @@ require("gruvbox").setup({
     dark0 = '#2d2c35',
   },
   overrides = {
-    IndentBlanklineContextStart = { sp = '#c79194' },
+    IndentBlanklineContextStart = { sp = '#c79194', underline = true },
     IndentBlanklineContextChar = { fg = '#c79194' },
     IndentBlanklineChar = { fg = 'NONE' },
     Visual = { bg = '#171821', bold = true },
@@ -44,5 +44,5 @@ require("gruvbox").setup({
   transparent_mode = true,
 })
 
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+-- vim.o.background = "dark" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
