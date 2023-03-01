@@ -3,7 +3,7 @@
 require("gruvbox").setup({
   undercurl = true,
   underline = true,
-  bold = false,
+  bold = true,
   italic = false,
   strikethrough = true,
   invert_selection = false,
@@ -13,7 +13,7 @@ require("gruvbox").setup({
   inverse = false, -- invert background for search, diffs, statuslines and errors
   contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {
-    bg = '#2d2c35',
+    dark0 = '#2d2c35',
   },
   overrides = {
     IndentBlanklineContextStart = { sp = '#c79194' },
@@ -32,12 +32,12 @@ require("gruvbox").setup({
     Normal = { bg = '#2d2c35' },
     NormalFloat = { bg = '#2d2c35' },
     FloatBorder = { bg = '#2d2c35' },
-    DiagnosticVirtualTextError = { bg = '#2d2c35' },
-    DiagnosticVirtualTextWarn = { bg = '#2d2c35' },
-    DiagnosticVirtualTextInfo = { bg = '#2d2c35' },
-    DiagnosticVirtualTextHint = { bg = '#2d2c35' },
+    -- DiagnosticVirtualTextError = { bg = '#2d2c35' },
+    -- DiagnosticVirtualTextWarn = { bg = '#2d2c35' },
+    -- DiagnosticVirtualTextInfo = { bg = '#2d2c35' },
+    -- DiagnosticVirtualTextHint = { bg = '#2d2c35' },
     Delimiter = { fg = '#45878a' },
-    MatchParen = { fg = '#45878a', bg = '#171821'},
+    MatchParen = { fg = '#45878a', bg = '#171821' },
     Comment = { italic = true },
   },
   dim_inactive = false,

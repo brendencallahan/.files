@@ -1,8 +1,12 @@
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
-local custom_theme = require('lualine.themes.gruvbox')
+local custom_theme = require('lualine.themes.auto')
 
 custom_theme.normal.c.bg = 'None'
+custom_theme.insert.c = custom_theme.normal.c
+custom_theme.visual.c = custom_theme.normal.c
+custom_theme.command.c = custom_theme.normal.c
+custom_theme.inactive.c = custom_theme.normal.c
 
 lualine.setup {
   options = {
