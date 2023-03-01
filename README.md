@@ -2,7 +2,7 @@
 
 ### *copy at your own peril*
 
-![image](https://user-images.githubusercontent.com/47364240/219877011-74160be8-e661-44b8-93e4-ea7a404c4012.png)
+![image](https://user-images.githubusercontent.com/47364240/222180285-4303f2ab-37ba-4979-9d3c-f29de163e33b.png)
 
 There are three directories: laptop, desktop, and shared.
 Hopefully the names make sense :p
