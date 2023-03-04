@@ -12,14 +12,17 @@ packer.startup(function(use)
   use 'akinsho/toggleterm.nvim'
 
   -- Colors/Menus
-  use 'rebelot/kanagawa.nvim'
+  use {
+    'rebelot/kanagawa.nvim',
+    commit = 'de7fb5f'
+  }
   use 'ellisonleao/gruvbox.nvim'
   use 'folke/tokyonight.nvim'
   use 'mechatroner/rainbow_csv'
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'NvChad/nvim-colorizer.lua' -- Preview colors (like hex code as background)
+  use 'NvChad/nvim-colorizer.lua'    -- Preview colors (like hex code as background)
   use {
-    'nvim-tree/nvim-tree.lua', -- File explorer
+    'nvim-tree/nvim-tree.lua',       -- File explorer
     requires = {
       'kyazdani42/nvim-web-devicons' -- icons
     }
@@ -28,8 +31,8 @@ packer.startup(function(use)
   -- use 'echasnovski/mini.nvim' -- Underline occurences of word
 
   -- Status lines/Live grep
-  use 'akinsho/bufferline.nvim' -- Menu for buffer navigation
-  use 'nvim-lualine/lualine.nvim' -- Statusline on bottom
+  use 'akinsho/bufferline.nvim'       -- Menu for buffer navigation
+  use 'nvim-lualine/lualine.nvim'     -- Statusline on bottom
   use 'nvim-telescope/telescope.nvim' -- Popup menu for ripgrepping
 
   -- Debugger
@@ -40,21 +43,21 @@ packer.startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Language server
-  use 'williamboman/mason.nvim' -- Automagically setup lsp servers
+  use 'williamboman/mason.nvim'           -- Automagically setup lsp servers
   use 'williamboman/mason-lspconfig.nvim' -- help automagic work
   use 'jay-babu/mason-null-ls.nvim'
-  use 'nvim-lua/plenary.nvim' -- helper lua functions for plugins
-  use 'onsails/lspkind.nvim' -- VSCode like icons for lsp
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'nvim-lua/plenary.nvim'             -- helper lua functions for plugins
+  use 'onsails/lspkind.nvim'              -- VSCode like icons for lsp
+  use 'glepnir/lspsaga.nvim'              -- LSP UIs
 
   -- Autocompletion
-  use 'neovim/nvim-lspconfig' -- easier configs
+  use 'neovim/nvim-lspconfig'               -- easier configs
   use 'hrsh7th/cmp-nvim-lsp-signature-help' -- display function signatures (params)
-  use 'hrsh7th/cmp-nvim-lsp' -- neovim's LSP
-  use 'hrsh7th/cmp-path' -- file paths
-  use 'hrsh7th/cmp-buffer' -- buffer words
-  use 'hrsh7th/cmp-cmdline' -- command line
-  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'hrsh7th/cmp-nvim-lsp'                -- neovim's LSP
+  use 'hrsh7th/cmp-path'                    -- file paths
+  use 'hrsh7th/cmp-buffer'                  -- buffer words
+  use 'hrsh7th/cmp-cmdline'                 -- command line
+  use 'hrsh7th/nvim-cmp'                    -- Completion
 
   -- Convenient 'dumb' autocomplete
   use 'windwp/nvim-autopairs'
