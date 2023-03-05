@@ -14,7 +14,7 @@ packer.startup(function(use)
   -- Colors/Menus
   use {
     'rebelot/kanagawa.nvim',
-    commit = '476eb22'
+    commit = 'de7fb5f'
   }
   use 'ellisonleao/gruvbox.nvim'
   use 'folke/tokyonight.nvim'
