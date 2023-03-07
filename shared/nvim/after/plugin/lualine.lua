@@ -6,6 +6,8 @@ custom_theme.normal.c.bg = 'None'
 custom_theme.insert.c = custom_theme.normal.c
 custom_theme.visual.c = custom_theme.normal.c
 custom_theme.command.c = custom_theme.normal.c
+custom_theme.inactive.a = custom_theme.normal.c
+custom_theme.inactive.b = custom_theme.normal.c
 custom_theme.inactive.c = custom_theme.normal.c
 
 lualine.setup {
@@ -21,7 +23,6 @@ lualine.setup {
     lualine_a = { 'mode' },
     lualine_b = {
       'branch',
-      'diff'
     },
     lualine_c = {
       {
@@ -29,6 +30,7 @@ lualine.setup {
         file_status = true, -- displays file status (readonly status, modified status)
         path = 0            -- 0 = just filename, 1 = relative path, 2 = absolute path
       },
+      'diff'
     },
     lualine_x = {
       {
@@ -55,7 +57,20 @@ lualine.setup {
       file_status = true, -- displays file status (readonly status, modified status)
       path = 1            -- 0 = just filename, 1 = relative path, 2 = absolute path
     } },
-    lualine_x = { 'location' },
+    lualine_x = {
+      {
+        'diagnostics',
+        sources = { "nvim_diagnostic" },
+        symbols = {
+          error = ' ',
+          warn = ' ',
+          info = ' ',
+          hint = ' '
+        }
+      },
+      -- 'encoding',
+      'filetype'
+    },
     lualine_y = {},
     lualine_z = {}
   },
