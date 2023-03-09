@@ -86,17 +86,17 @@ packer.startup(function(use)
 
   -- Alternative to cmp-nvim-lsp-signature-help
   -- use 'ray-x/lsp_signature.nvim'
-
+  --
   -- (free) Alternative to copilot
   -- Be sure to run :Codeium Auth
-  -- use { 'Exafunction/codeium.vim',
-  -- config = function()
-  -- Change '<C-g>' here to any keycode you like.
-  -- vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-  -- vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-  -- vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-  -- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-  -- end }
+  use { 'Exafunction/codeium.vim',
+    config = function()
+      -- Change '<C-g>' here to any keycode you like.
+      vim.keymap.set('i', '<C-f>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+      vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+      vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+      vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+    end }
   if Packer_bootstrap then
     packer.sync()
   end
