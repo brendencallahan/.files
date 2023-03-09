@@ -92,6 +92,7 @@ packer.startup(function(use)
   use { 'Exafunction/codeium.vim',
     config = function()
       -- Change '<C-g>' here to any keycode you like.
+      vim.g.codeium_disable_bindings = 1
       vim.keymap.set('i', '<C-f>', function() return vim.fn['codeium#Accept']() end, { expr = true })
       vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
       vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
