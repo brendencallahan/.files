@@ -124,7 +124,6 @@ nvim_lsp.lua_ls.setup {
         -- Get the language server to recognize the `vim` global
         globals = { 'vim' }
       },
-
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
@@ -213,7 +212,7 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-b>'] = cmp.mapping.scroll_docs( -4),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
@@ -232,8 +231,8 @@ cmp.setup({
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif ls.jumpable( -1) then
-        ls.jump( -1)
+      elseif ls.jumpable(-1) then
+        ls.jump(-1)
       else
         fallback()
       end
@@ -250,11 +249,14 @@ cmp.setup({
   formatting = {
     format = lspkind.cmp_format({
       maxwidth = 50,
+      -- mode = 'symbol_text',
       before = function(entry, vim_item)
         vim_item = formatForTailwindCSS(entry, vim_item)
+        vim_item.menu = ""
         return vim_item
       end
-    })
+    }),
+    fields = { 'abbr', 'kind' },
   }
 })
 
