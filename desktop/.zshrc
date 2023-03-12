@@ -89,7 +89,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -188,6 +188,7 @@ alias gp='git push'
 
 # docker
 alias docker='sudo docker'
+alias lazydocker='sudo lazydocker'
 
 # zathura
 alias zf='zathura --fork'
@@ -207,3 +208,6 @@ alias mouse_slow='xinput --set-prop 24 "libinput Accel Speed" -0.75'
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Change escape
+bindkey -M viins 'jk' vi-cmd-mode
