@@ -30,7 +30,7 @@ dark_value='0.30'
 
 # Wallpaper
 wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-wallpaper="/usr/share/backgrounds/catsss.jpeg"
+wallpaper="$wdir/wallpaper"
 
 # Polybar
 polybar_font='JetBrainsMono Nerd Font:size=10;3'
@@ -48,7 +48,7 @@ geany_colors='adapta.conf'
 geany_font='JetBrains Mono 10'
 
 # Appearance
-gtk_font='Noto Sans 9'
+gtk_font='JetBrains Mono 10'
 gtk_theme='Adapta-Nokto'
 icon_theme='Archcraft-Dark'
 cursor_theme='Pear'
@@ -58,7 +58,7 @@ dunst_width='300'
 dunst_height='80'
 dunst_offset='10x40'
 dunst_origin='top-right'
-dunst_font='JetBrains Mono 9'
+dunst_font='JetBrains Mono 10'
 dunst_border='0'
 dunst_separator='2'
 
