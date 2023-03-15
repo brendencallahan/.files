@@ -52,7 +52,11 @@ nvim_lsp.eslint.setup {
 
 nvim_lsp.svelte.setup { capabilities = capabilities }
 
-nvim_lsp.clangd.setup { capabilities = capabilities }
+local clangd_capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+-- clangd_capabilities.textDocument.semanticHighlighting = true
+clangd_capabilities.offsetEncoding = "utf-8"
+
+nvim_lsp.clangd.setup { capabilities = clangd_capabilities }
 
 nvim_lsp.bashls.setup { capabilities = capabilities }
 
