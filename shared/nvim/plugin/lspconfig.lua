@@ -50,6 +50,8 @@ nvim_lsp.eslint.setup {
   end
 }
 
+nvim_lsp.svelte.setup { capabilities = capabilities }
+
 nvim_lsp.jdtls.setup { capabilities = capabilities }
 
 nvim_lsp.bashls.setup { capabilities = capabilities }

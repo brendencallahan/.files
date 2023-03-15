@@ -62,6 +62,7 @@ mason_lspconfig.setup {
     "lua_ls",
     "bashls",
     "jdtls",
+    "svelte"
   },
   automatic_installation = { exclude = { "tsserver" } }
 }

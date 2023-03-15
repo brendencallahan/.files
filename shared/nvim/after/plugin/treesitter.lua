@@ -29,6 +29,7 @@ ts.setup {
     "python",
     "regex",
     "rust",
+    "svelte",
     "sql",
     "tsx",
     "toml",

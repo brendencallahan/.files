@@ -170,6 +170,7 @@ alias ohmyzsh="thunar ~/.oh-my-zsh"
 alias projects='cd /home/kent/Projects'
 alias books='cd /home/kent/Books/'
 alias mbooks='cd /home/kent/Books/MathBooks/'
+alias pbooks='cd /home/kent/Books/ProgrammingBooks/'
 
 # ls
 alias l='ls -lh'
