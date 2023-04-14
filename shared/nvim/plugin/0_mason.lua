@@ -46,8 +46,6 @@ mason_dap.setup({
   automatic_setup = true
 })
 
-mason_dap.setup_handlers()
-
 mason_lspconfig.setup {
   ensure_installed = {
     "tailwindcss",
